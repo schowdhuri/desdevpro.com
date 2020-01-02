@@ -1,0 +1,12 @@
+{
+  "name": "gatsby-renark-copy-svg",
+  "private": true,
+  "description": "Copies SVG files to the public folder",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "is-relative-url": "^3.0.0",
+    "unist-util-visit": "^2.0.2"
+  }
+}
