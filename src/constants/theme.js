@@ -1,12 +1,18 @@
 export const headerHeight = "60px";
 export const coverHeight = "300px";
+export const footerHeight = "160px";
+export const leftMargin = "20%";
 
-export const bodyFontSize = "18px";
-export const bodyFontSizeMobile = "16px";
-export const smallFontSize = "14px";
+export const copySize = "18px";
+export const copySizeMobile = "16px";
+export const copySizeSmall = "14px";
 
 export const navbarCollapsedWidth = "60px";
 export const navbarWidth = "230px";
+
+export const fontCopy = "\"Clear Sans Light\", sans-serif, sans";
+export const fontHeading = "\"corbertregular\", sans-serif, sans";
+export const fontBrand = "vezuslight, sans-serif, sans";
 
 export const fontSize = [
   "48px",

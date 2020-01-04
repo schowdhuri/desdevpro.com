@@ -25,7 +25,7 @@ function Article(props) {
       </Helmet>
       <Header
         title={mdx.frontmatter.title}
-        coverImage={mdx.frontmatter.coverImage.publicURL}
+        coverImage={mdx.frontmatter.coverImage?.publicURL}
       />
       <Wrapper>
         <Content>

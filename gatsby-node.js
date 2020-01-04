@@ -7,11 +7,18 @@ const articlesQuery = `
         node {
           id
           excerpt(pruneLength:200)
-          frontmatter{
+          frontmatter {
             title
             summary
             path
             category
+            coverImage {
+              childImageSharp {
+                sizes(maxWidth: 600 ) {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -51,7 +58,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const catIndex = new Map();
   // Article Pages
   articles.data.allMdx.edges.forEach(({ node }) => {
-    const articlePath = `/article/${node.frontmatter.path}`;
+    const articlePath = `/${node.frontmatter.category}/${node.frontmatter.path}`;
     createPage({
       path: articlePath,
       component: path.resolve("src/templates/article.js"),
@@ -72,7 +79,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         title: node.frontmatter.title,
         summary: node.frontmatter.summary,
         excerpt: node.excerpt,
-        path: articlePath
+        path: articlePath,
+        coverImage: node.frontmatter.coverImage
       }
     ];
     catIndex.set(category, catArticles);

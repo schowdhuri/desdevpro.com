@@ -1,5 +1,14 @@
 import { createGlobalStyle } from "styled-components";
-import { colors, fontSize, medium } from "../constants/theme";
+import { darken } from "polished";
+import {
+  colors,
+  fontSize,
+  fontCopy,
+  fontHeading,
+  medium,
+  copySizeSmall,
+  copySizeMobile
+} from "../constants/theme";
 
 const cssReset = `
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -82,18 +91,95 @@ const fontFaces = `
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: "ddpicons";
+    src: url("/fonts/ddpicons/ddpicons.eot?25466695");
+    src: url("/fonts/ddpicons/ddpicons.eot?25466695#iefix") format("embedded-opentype"),
+         url("/fonts/ddpicons/ddpicons.woff?25466695") format("woff"),
+         url("/fonts/ddpicons/ddpicons.ttf?25466695") format("truetype"),
+         url("/fonts/ddpicons/ddpicons.svg?25466695#ddpicons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+  /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+  /*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: "ddpicons";
+      src: url("/fonts/ddpicons.svg?25466695#ddpicons") format("svg");
+    }
+  }
+  */
+
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "ddpicons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+
+  .icon-users:before { content: "\\e801"; } /* "" */
+  .icon-mail:before { content: "\\e802"; } /* "" */
+  .icon-mail-filled:before { content: "\\e803"; } /* "" */
+  .icon-home:before { content: "\\e805"; } /* "" */
+  .icon-info-circled:before { content: "\\e806"; } /* "" */
+  .icon-angle-down:before { content: "\\e807"; } /* "" */
+  .icon-globe:before { content: "\\e808"; } /* "" */
+  .icon-book:before { content: "\\e809"; } /* "" */
+  .icon-search:before { content: "\\e80b"; } /* "" */
+  .icon-time:before { content: "\\e80c"; } /* "" */
+  .icon-user:before { content: "\\e80d"; } /* "" */
+  .icon-hamburger:before { content: "\\e80e"; } /* "" */
+  .icon-tags:before { content: "\\e810"; } /* "" */
+  .icon-angle-up:before { content: "\\e811"; } /* "" */
+  .icon-tag:before { content: "\\e812"; } /* "" */
+  .icon-cancel:before { content: "\\e813"; } /* "" */
+  .icon-ok:before { content: "\\e814"; } /* "" */
+  .icon-upload:before { content: "\\e815"; } /* "" */
+  .icon-folder:before { content: "\\e816"; } /* "" */
+  .icon-facebook:before { content: "\\e817"; } /* "" */
+  .icon-twitter:before { content: "\\e818"; } /* "" */
+  .icon-data-science:before { content: "\\e81a"; } /* "" */
+  .icon-rocket:before { content: "\\e81b"; } /* "" */
+  .icon-flask:before { content: "\\e81c"; } /* "" */
+  .icon-calendar:before { content: "\\e81d"; } /* "" */
 `;
 
 const appCss = `
   body {
     color: ${colors.text};
-    font-family: "Clear Sans Light", sans-serif, sans;
+    font-family: ${fontCopy};
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.6;
   }
   h1, h2, h3, h4, h5 {
     font-weight: 600;
-    font-family: "corbertregular", sans-serif, sans;
+    font-family: ${fontHeading};
     line-height: 1.1;
   }
   h1 {
@@ -116,6 +202,29 @@ const appCss = `
   }
   h5 {
     font-size: ${fontSize[7]};
+  }
+  a {
+    color: ${colors.secondary};
+  }
+  .btn {
+    text-decoration: none;
+    background-color: ${colors.tertiary};
+    padding: 0.75rem 1.25rem;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    font-size: ${copySizeMobile};
+    @media ${medium} {
+      font-size: ${copySizeSmall};
+    }
+    &:hover {
+      background-color: ${darken(0.1, colors.tertiary)};
+      transition: background-color 0.5s;
+    }
+  }
+  a.btn, a.btn:link, a.btn:focus, a.btn:visited {
+    color: #fff;
   }
 `;
 

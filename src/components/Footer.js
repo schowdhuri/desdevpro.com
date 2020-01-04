@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import {
-  small,
   medium,
   colors,
   footerHeight,
@@ -11,7 +10,7 @@ import {
 
 function Footer() {
   return (<Wrapper>
-    <p class="license">
+    <p className="license">
       <LicenseLink rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
       </LicenseLink>
@@ -56,7 +55,7 @@ const Wrapper = styled.footer`
 `;
 
 const LicenseLink = styled.a`
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
   @media ${medium} {
     margin: 0 10px 0 0;
   }
