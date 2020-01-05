@@ -1,7 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import { coverHeight, colors, fontSize } from "../constants/theme";
+import {
+  coverHeight,
+  colors,
+  fontSize,
+  medium,
+  navbarCollapsedWidth,
+  contentWidth,
+  contentWidthMax
+} from "../constants/theme";
 
 function Header(props) {
   const { title, coverImage } = props;
@@ -31,18 +39,25 @@ const Wrapper = styled.header`
   left: 0;
   position: fixed;
   right: 0;
-  top: 0;
+  top: 70px;
   z-index: 2;
+  @media ${medium} {
+    top: 0;
+  }
 `;
 const Title = styled.h1`
   color: ${colors.gray[0]};
-  font-size: ${fontSize[0]};
+  font-size: ${fontSize[2]};
   font-weight: 400;
-  max-width: 50rem;
+  max-width: ${contentWidthMax};
   position: relative;
   text-shadow: 2px 2px 6px #000;
-  width: 90vw;
+  width: ${contentWidth};
   z-index: 2;
+  @media ${medium} {
+    font-size: ${fontSize[0]};
+    margin-left: ${navbarCollapsedWidth};
+  }
 `;
 const Overlay = styled.div`
   background: ${colors.gray[5]} url("/images/Pattern1.png") repeat;

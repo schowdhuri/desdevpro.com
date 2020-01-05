@@ -8,7 +8,7 @@ import styled from "styled-components";
 import Figure from "../components/Figure";
 import Header from "../components/ArticleHeader";
 import Layout from "../components/Layout";
-import { colors, coverHeight } from "../constants/theme";
+import { colors, coverHeight, headerHeight, medium } from "../constants/theme";
 
 const shortcodes = { Link, Figure };
 
@@ -34,9 +34,7 @@ function Article(props) {
           </MDXProvider>
           {mdx.frontmatter.date}
         </Content>
-        <TableOfContents>
-          toc
-        </TableOfContents>
+        <TableOfContents>toc</TableOfContents>
       </Wrapper>
     </Layout>
   );
@@ -44,12 +42,19 @@ function Article(props) {
 
 const Wrapper = styled.article`
   background: ${colors.background};
-  margin-top: ${coverHeight};
   padding-top: 4em;
   position: relative;
   z-index: 5;
+  margin-top: ${coverHeight};
+  margin-top: calc(${coverHeight} + ${headerHeight});
+  @media ${medium} {
+    margin-top: ${coverHeight};
+  }
 
-  h2, h3, h4, h5 {
+  h2,
+  h3,
+  h4,
+  h5 {
     margin: 2em 0 1em;
   }
 `;
@@ -71,7 +76,7 @@ export const pageQuery = graphql`
         summary
         author
         date(formatString: "DD MMM, YYYY")
-        coverImage{
+        coverImage {
           publicURL
         }
         meta {

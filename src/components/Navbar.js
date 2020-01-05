@@ -99,7 +99,7 @@ const Logo = styled.div`
   }
   svg {
     @media ${small} {
-      width: 160px;
+      height: 55px;
     }
   }
   path {
@@ -115,9 +115,22 @@ const Logo = styled.div`
     }
   }
 `;
-
+const BtnMenu = styled.button`
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: ${colors.gray[2]};
+  float: right;
+  font-size: 1.5rem;
+  padding: 0;
+  transform: translate(5px, 70%);
+  @media ${medium} {
+    display: none;
+  }
+`;
 const Nav = styled.nav`
   background-color: ${colors.gray[5]};
+  box-shadow: 2px 0 4px ${colors.gray[6]};
   overflow: hidden;
   padding: 0.5rem 1rem;
   position: fixed;
@@ -130,6 +143,7 @@ const Nav = styled.nav`
 
   @media ${medium} {
     bottom: 0;
+    box-shadow: none;
     display: block;
     left: 0;
     padding: 0;
@@ -199,20 +213,6 @@ const Links = styled.ul`
         box-shadow: 0 0 4px ${colors.gray[4]};
       }
     }
-  }
-`;
-
-const BtnMenu = styled.button`
-  background: none;
-  border: none;
-  box-shadow: none;
-  color: ${colors.gray[1]};
-  float: right;
-  font-size: 1.5rem;
-  padding: 0;
-  transform: translate(5px, 25%);
-  @media ${medium} {
-    display: none;
   }
 `;
 

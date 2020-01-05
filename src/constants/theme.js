@@ -1,7 +1,8 @@
-export const headerHeight = "60px";
+export const headerHeight = "70px";
 export const coverHeight = "300px";
-export const footerHeight = "160px";
-export const leftMargin = "20%";
+export const footerHeight = "100px";
+export const contentWidth = "90vw";
+export const contentWidthMax = "50rem";
 
 export const copySize = "18px";
 export const copySizeMobile = "16px";

@@ -9,7 +9,8 @@ import {
   fontSize,
   colors,
   copySizeMobile,
-  fontCopy
+  fontCopy,
+  contentWidthMax
 } from "../constants/theme";
 
 function CategoryIndex(props) {
@@ -85,7 +86,7 @@ const Article = styled.article`
   padding: 0;
 
   @media ${medium} {
-    width: 600px;
+    width: ${contentWidthMax};
   }
 
   *:first-child {

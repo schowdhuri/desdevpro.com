@@ -5,7 +5,7 @@ import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { footerHeight, small } from "../constants/theme";
+import { footerHeight, small, navbarCollapsedWidth } from "../constants/theme";
 
 function Layout(props) {
   const { config, children } = props;
@@ -29,9 +29,10 @@ function Layout(props) {
 const Main = styled.main`
   min-height: 100vh;
   min-height: calc(100vh - ${footerHeight});
-
+  padding-left: ${navbarCollapsedWidth};
   @media ${small} {
     padding-top: 2rem;
+    padding-left: 0;
   }
 `;
 
