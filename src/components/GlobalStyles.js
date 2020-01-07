@@ -207,14 +207,16 @@ const appCss = `
     color: ${colors.secondary};
   }
   .btn {
-    text-decoration: none;
     background-color: ${colors.tertiary};
-    padding: 0.75rem 1.25rem;
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: 300;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     color: #fff;
+    display: inline-block;
     font-size: ${copySizeMobile};
+    font-weight: 300;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
     @media ${medium} {
       font-size: ${copySizeSmall};
     }

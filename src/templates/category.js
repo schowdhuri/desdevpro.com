@@ -5,11 +5,11 @@ import styled from "styled-components";
 import Layout from "../components/Layout";
 import {
   medium,
-  leftMargin,
   fontSize,
   colors,
   copySizeMobile,
   fontCopy,
+  contentWidth,
   contentWidthMax
 } from "../constants/theme";
 
@@ -49,7 +49,7 @@ function CategoryIndex(props) {
 const Wrapper = styled.div`
   padding: 1rem;
   @media ${medium} {
-    padding-left: ${leftMargin};
+    padding: 0;
   }
 `;
 
@@ -57,13 +57,15 @@ const Title = styled.h1`
   font-size: ${fontSize[2]};
   font-weight: 300;
   line-height: 1.6em;
-  margin: 064px 0;
+  margin: 70px auto 40px;
+  max-width: 40rem;
   position: relative;
   text-transform: uppercase;
+  width: ${contentWidth};
 
   @media ${medium} {
     font-size: ${fontSize[0]};
-    margin: 80px 0 40px 0;
+    margin: 80px auto;
   }
 
   &:after {
@@ -79,15 +81,14 @@ const Title = styled.h1`
 
 const Article = styled.article`
   background: ${colors.gray[0]};
-  border: 1px solid ${colors.gray[1]};
-  box-shadow: 0 1px 8px -6px rgba(0, 0, 0, 0.3) inset;
-  margin: 40px 0;
+  border: 1px solid ${colors.gray[0]};
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -2px rgba(0, 0, 0, 0.3);
+  margin: 40px auto;
+  max-width: 40rem;
   font-size: ${copySizeMobile};
   padding: 0;
-
-  @media ${medium} {
-    width: ${contentWidthMax};
-  }
+  width: ${contentWidth};
 
   *:first-child {
     margin-top: 0;
@@ -111,6 +112,7 @@ const Summary = styled.div`
 `;
 
 const Cover = styled.img`
+  border-radius: 2px 2px 0 0;
   display: block;
   object-fit: cover;
   height: 300px;
