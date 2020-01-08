@@ -29,12 +29,22 @@ function Article(props) {
       />
       <Wrapper>
         <Content>
+          <Dates>
+            <dt>Published:</dt>
+            <dd>{mdx.frontmatter.date}</dd>
+            {!mdx.frontmatter.updated || (
+              <React.Fragment>
+                <dt>Last updated:</dt>
+                <dd>{mdx.frontmatter.updated}</dd>
+              </React.Fragment>
+            )}
+          </Dates>
           <MDXProvider components={shortcodes}>
             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
           </MDXProvider>
           {mdx.frontmatter.date}
         </Content>
-        <TableOfContents>toc</TableOfContents>
+        <TableOfContents></TableOfContents>
       </Wrapper>
     </Layout>
   );
@@ -42,7 +52,7 @@ function Article(props) {
 
 const Wrapper = styled.article`
   background: ${colors.background};
-  padding-top: 4em;
+  padding: 4rem 0;
   position: relative;
   z-index: 5;
   margin-top: ${coverHeight};
@@ -55,10 +65,22 @@ const Wrapper = styled.article`
   h3,
   h4,
   h5 {
-    margin: 2em 0 1em;
+    margin: 1.5em 0 0.5em;
   }
 `;
+const Dates = styled.dl`
+  color: ${colors.gray[3]};
+  display: flex;
+  margin-bottom: 2rem;
 
+  dt {
+    font-weight: 600;
+    margin-right: 5px;
+  }
+  dd {
+    margin-right: 1em;
+  }
+`;
 const Content = styled.div`
   margin: 0 auto;
   max-width: 50rem;
@@ -75,7 +97,8 @@ export const pageQuery = graphql`
         title
         summary
         author
-        date(formatString: "DD MMM, YYYY")
+        date(formatString: "MMM DD, YYYY")
+        updated(formatString: "MMM DD, YYYY")
         coverImage {
           publicURL
         }

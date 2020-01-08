@@ -171,7 +171,11 @@ const fontFaces = `
 `;
 
 const appCss = `
+  * {
+    box-sizing: border-box;
+  }
   body {
+    background-color: ${colors.background};
     color: ${colors.text};
     font-family: ${fontCopy};
     font-weight: 300;
@@ -180,7 +184,7 @@ const appCss = `
   h1, h2, h3, h4, h5 {
     font-weight: 600;
     font-family: ${fontHeading};
-    line-height: 1.1;
+    line-height: 1.25;
   }
   h1 {
     font-size: ${fontSize[3]};

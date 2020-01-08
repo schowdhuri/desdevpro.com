@@ -1,6 +1,5 @@
 import React from "react";
 import Helmet from "react-helmet";
-// import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
@@ -47,22 +46,52 @@ function About() {
         </p>
 
         <Author>
-          <img src="/images/Subir.jpg" alt="Subir Chowdhuri" />
+          <Author.ProfilePhoto src="/images/Subir.jpg" alt="Subir Chowdhuri" />
           <p>
             I am a web-developer, CG enthusiast, hardware hacker, avid DIYer and
             a big proponent of free (as in beer) sharing of knowledge. Can hold
             my end of a conversation on robotics, Raspberry Pi, amateur
             astronomy, photography, amateur radio and 3D modeling. On my days
             off, if I am not working on one of my side-projects, I can be found
-            on a nearby hiking trail. Hit me up on{" "}
-            <a
-              href="https://twitter.com/_subir_"
-              rel="noopener"
-              target="_blank"
-            >
-              Twitter
-            </a>
-            .<Name>Subir Chowdhuri</Name>
+            on a nearby hiking trail. .<Name>Subir Chowdhuri</Name>
+            <Links>
+              <li>
+                <a
+                  href="https://github.com/schowdhuri/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Icon mask="/images/github.svg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/_subir_/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Icon mask="/images/twitter.svg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/subirchowdhuri/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Icon mask="/images/linkedin.svg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/subir.chowdhuri/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Icon mask="/images/instagram.svg" />
+                </a>
+              </li>
+            </Links>
           </p>
         </Author>
       </Article>
@@ -73,14 +102,14 @@ function About() {
 const Article = styled.article`
   margin: 0 auto;
   max-width: ${contentWidthMax};
-  padding: 0 0 4rem;
+  padding: 4rem 0;
   width: ${contentWidth};
 
   p + p {
     margin-top: 1rem;
   }
   @media ${medium} {
-    padding: 4rem 0;
+    padding: 0 0 4rem;
   }
 `;
 const Title = styled.h1`
@@ -118,11 +147,6 @@ const Author = styled.section`
     flex-direction: row;
     text-align: left;
   }
-  img {
-    border-radius: 50%;
-    height: 128px;
-    width: 128px;
-  }
   p {
     font-style: italic;
     padding: 1rem;
@@ -131,10 +155,49 @@ const Author = styled.section`
     }
   }
 `;
+Author.ProfilePhoto = styled.img`
+  border-radius: 50%;
+  height: 128px;
+  width: 128px;
+  @media ${medium} {
+    align-self: start;
+  }
+`;
 const Name = styled.span`
   display: block;
+  font-size: ${fontSize[6]};
   font-weight: 600;
   margin-top: 1rem;
+`;
+const Links = styled.ul`
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 40px 0 20px;
+  padding: 0;
+
+  @media ${medium} {
+    justify-content: start;
+    margin: 10px 0;
+  }
+`;
+const Icon = styled.i`
+  background: ${colors.gray[4]};
+  display: block;
+  height: 2rem;
+  margin: 0 1rem;
+  mask: ${props => `url(${props.mask})`};
+  transition: background-color 0.3s;
+  width: 2rem;
+  @media ${medium} {
+    height: 1.5rem;
+    margin: 0 5px;
+    width: 1.5rem;
+  }
+
+  &:hover {
+    background: ${colors.secondary};
+  }
 `;
 
 export default About;

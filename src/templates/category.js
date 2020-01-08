@@ -9,8 +9,7 @@ import {
   colors,
   copySizeMobile,
   fontCopy,
-  contentWidth,
-  contentWidthMax
+  contentWidth
 } from "../constants/theme";
 
 function CategoryIndex(props) {
@@ -81,7 +80,6 @@ const Title = styled.h1`
 
 const Article = styled.article`
   background: ${colors.gray[0]};
-  border: 1px solid ${colors.gray[0]};
   border-radius: 2px;
   box-shadow: 0 1px 4px -2px rgba(0, 0, 0, 0.3);
   margin: 40px auto;
@@ -114,8 +112,8 @@ const Summary = styled.div`
 const Cover = styled.img`
   border-radius: 2px 2px 0 0;
   display: block;
-  object-fit: cover;
   height: 300px;
+  object-fit: cover;
   width: 100%;
 `;
 

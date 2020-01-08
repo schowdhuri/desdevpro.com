@@ -30,13 +30,6 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: `${__dirname}/src/pages`
-      }
-    },
-    {
       resolve: "gatsby-plugin-mdx",
       options: {
         gatsbyRemarkPlugins: [
@@ -51,7 +44,8 @@ module.exports = {
               showCaptions: false
             }
           }
-        ]
+        ],
+        rehypePlugins: [require("rehype-slug")]
       }
     },
     "gatsby-plugin-sharp",

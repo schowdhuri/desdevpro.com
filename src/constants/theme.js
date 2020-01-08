@@ -1,6 +1,6 @@
 export const headerHeight = "70px";
 export const coverHeight = "300px";
-export const footerHeight = "100px";
+export const footerHeight = "150px";
 export const contentWidth = "90vw";
 export const contentWidthMax = "50rem";
 
@@ -11,8 +11,8 @@ export const copySizeSmall = "14px";
 export const navbarCollapsedWidth = "60px";
 export const navbarWidth = "230px";
 
-export const fontCopy = "\"Clear Sans Light\", sans-serif, sans";
-export const fontHeading = "\"corbertregular\", sans-serif, sans";
+export const fontCopy = '"Clear Sans Light", sans-serif, sans';
+export const fontHeading = '"corbertregular", sans-serif, sans';
 export const fontBrand = "vezuslight, sans-serif, sans";
 
 export const fontSize = [
@@ -31,7 +31,8 @@ export const colors = {
   secondary: "#ee0072",
   tertiary: "#2aabe4",
   text: "#404040",
-  background: "#fff",
+  background: "#f2f2f2",
+  cardBg: "#fff",
   gray: [
     "#fafafa",
     "#e9edee",
