@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="598.34mm" height="97.709mm" version="1.1" viewBox="0 0 598.34 97.709" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<g transform="translate(9.881 -64.922)">
+<g fill="none" stroke="#549ae8">
+<path d="m18.899 97.429v31.372"/>
+<path d="m15.119 112.55h60.594" stroke-width="2"/>
+<g>
+<path d="m29.86 101.66v21.923"/>
+<path d="m40.443 101.66v21.923"/>
+<path d="m51.027 101.66v21.923"/>
+<path d="m61.61 101.66v21.923"/>
+<path d="m72.193 101.66v21.923"/>
+</g>
+</g>
+<path d="m75.713 112.55 482.94-22.49s4.6766 8.3155 4.6766 22.112c0 12.095-4.6766 25.324-4.6766 25.324l-482.94-24.946" fill="#beeda4" fill-rule="evenodd" stroke="#beeda4" stroke-width=".26458px"/>
+</g>
+</svg>
