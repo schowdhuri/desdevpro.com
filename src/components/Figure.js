@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { colors } from "../constants/theme";
+
 const Figure = props => {
   const { svg, caption, children } = props;
   return <Fig svg={svg}>
@@ -14,6 +16,8 @@ const Figure = props => {
 const Fig = styled.figure`
   margin: 2em 0;
   .gatsby-resp-image-wrapper {
+    background-color: ${colors.cardBg};
+    box-shadow: 1px 1px 4px ${colors.gray[1]};
     border: solid 1px #e3e3e4;
     cursor: pointer;
     padding: 4px;
@@ -26,6 +30,7 @@ const Fig = styled.figure`
     padding: 0;
   }
   img {
+    background-color: ${colors.cardBg};
     box-sizing: border-box;
   }
   figcaption {

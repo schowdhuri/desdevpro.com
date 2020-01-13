@@ -57,6 +57,7 @@ const Title = styled.h1`
   @media ${medium} {
     font-size: ${fontSize[0]};
     margin-left: ${navbarCollapsedWidth};
+    padding: 0 1rem;
   }
 `;
 const Overlay = styled.div`

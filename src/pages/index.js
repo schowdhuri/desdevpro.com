@@ -101,7 +101,7 @@ const Tag = styled.label`
   padding-left: 1rem;
   text-transform: capitalize;
   @media ${medium} {
-    font-size: 0.85rem
+    font-size: 0.85rem;
     text-transform: uppercase;
   }
 `;

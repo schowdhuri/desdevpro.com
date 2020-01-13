@@ -96,7 +96,9 @@ const Logo = styled.div`
   display: flex;
   @media ${medium} {
     display: block;
-    margin: 20px 0 0 12px;
+    margin: 0 0 0 12px;
+    position: absolute;
+    top: 20px;
     width: 205px;
   }
   svg {
@@ -146,7 +148,9 @@ const Nav = styled.nav`
   @media ${medium} {
     bottom: 0;
     box-shadow: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     left: 0;
     padding: 0;
     right: auto;

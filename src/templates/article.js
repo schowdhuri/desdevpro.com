@@ -8,7 +8,7 @@ import styled from "styled-components";
 import Figure from "../components/Figure";
 import Header from "../components/ArticleHeader";
 import Layout from "../components/Layout";
-import { colors, coverHeight, headerHeight, medium } from "../constants/theme";
+import { colors, coverHeight, medium, small } from "../constants/theme";
 
 const shortcodes = { Link, Figure };
 
@@ -29,20 +29,28 @@ function Article(props) {
       />
       <Wrapper>
         <Content>
-          <Dates>
-            <dt>Published:</dt>
-            <dd>{mdx.frontmatter.date}</dd>
-            {!mdx.frontmatter.updated || (
-              <React.Fragment>
-                <dt>Last updated:</dt>
+          <Metadata>
+            <dl>
+              <dt>
+                <i className="icon icon-calendar" />
+                Published:
+              </dt>
+              <dd>{mdx.frontmatter.date}</dd>
+            </dl>
+            {mdx.frontmatter.updated &&
+            mdx.frontmatter.updated !== mdx.frontmatter.date ? (
+              <dl>
+                <dt>
+                  <i className="icon icon-calendar" />
+                  Last updated:
+                </dt>
                 <dd>{mdx.frontmatter.updated}</dd>
-              </React.Fragment>
-            )}
-          </Dates>
+              </dl>
+            ) : null}
+          </Metadata>
           <MDXProvider components={shortcodes}>
             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
           </MDXProvider>
-          {mdx.frontmatter.date}
         </Content>
         <TableOfContents></TableOfContents>
       </Wrapper>
@@ -52,27 +60,100 @@ function Article(props) {
 
 const Wrapper = styled.article`
   background: ${colors.background};
-  padding: 4rem 0;
+  padding: 2rem 0 4rem;
   position: relative;
   z-index: 5;
   margin-top: ${coverHeight};
-  margin-top: calc(${coverHeight} + ${headerHeight});
-  @media ${medium} {
-    margin-top: ${coverHeight};
-  }
 
+  @media ${medium} {
+    padding: 4rem 1rem;
+  }
   h2,
   h3,
   h4,
   h5 {
     margin: 1.5em 0 0.5em;
   }
+  .image-center {
+    display: block;
+    margin: 20px auto;
+  }
+  ol {
+    list-style: decimal;
+  }
+  ul {
+    list-style: square;
+  }
+  ol,
+  ul {
+    margin: 10px 0;
+    padding-left: 2rem;
+  }
+  p {
+    margin: 10px 0;
+  }
+  strong {
+    font-weight: 700;
+  }
+  em {
+    font-style: italic;
+  }
+  blockquote {
+    background-color: ${colors.gray[0]};
+    border-radius: 2px;
+    box-shadow: 2px 0 16px -4px rgba(128, 128, 128, 0.2);
+    // border-left: solid 4px ${colors.tertiary};
+    color: ${colors.gray[4]};
+    margin: 40px 0;
+    padding: 40px 40px 40px 60px;
+    position: relative;
+    z-index: 1;
+    &::before {
+      background: ${colors.tertiary};
+      content: " ";
+      display: block;
+      left: 10px;
+      height: 32px;
+      mask: url("/images/quote.svg");
+      position: absolute;
+      top: 10px;
+      transform: scale(-1);
+      width: 32px;
+      z-index: 2;
+    }
+    &::after {
+      background: ${colors.tertiary};
+      bottom: 10px;
+      content: " ";
+      height: 32px;
+      mask: url("/images/quote.svg");
+      position: absolute;
+      right: 10px;
+      width: 32px;
+      z-index: 2;
+    }
+  }
 `;
-const Dates = styled.dl`
+const Metadata = styled.section`
   color: ${colors.gray[3]};
-  display: flex;
   margin-bottom: 2rem;
+  @media ${medium} {
+    display: flex;
+    font-size: 0.9rem;
+  }
+  dl {
+    display: flex;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 
+    @media ${small} {
+      flex-wrap: wrap;
+      dt:nth-child(3n) {
+        flex-basis: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
   dt {
     font-weight: 600;
     margin-right: 5px;
@@ -94,18 +175,18 @@ export const pageQuery = graphql`
       id
       body
       frontmatter {
-        title
-        summary
-        author
-        date(formatString: "MMM DD, YYYY")
-        updated(formatString: "MMM DD, YYYY")
         coverImage {
           publicURL
         }
+        date(formatString: "MMM DD, YYYY")
         meta {
+          author
           description
           keywords
         }
+        summary
+        title
+        updated(formatString: "MMM DD, YYYY")
       }
     }
   }

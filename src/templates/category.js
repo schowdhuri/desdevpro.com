@@ -66,7 +66,6 @@ const Title = styled.h1`
     font-size: ${fontSize[0]};
     margin: 80px auto;
   }
-
   &:after {
     background: none repeat scroll 0 0 ${colors.primary};
     bottom: -15px;
@@ -79,7 +78,7 @@ const Title = styled.h1`
 `;
 
 const Article = styled.article`
-  background: ${colors.gray[0]};
+  background: ${colors.cardBg};
   border-radius: 2px;
   box-shadow: 0 1px 4px -2px rgba(0, 0, 0, 0.3);
   margin: 40px auto;
