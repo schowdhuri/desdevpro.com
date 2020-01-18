@@ -98,6 +98,9 @@ const Wrapper = styled.article`
   em {
     font-style: italic;
   }
+  code {
+    font-family: monospace;
+  }
   blockquote {
     background-color: ${colors.gray[0]};
     border-radius: 2px;

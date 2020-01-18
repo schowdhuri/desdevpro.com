@@ -43,6 +43,12 @@ module.exports = {
               disableBgImage: true,
               showCaptions: false
             }
+          },
+          {
+            resolve: "gatsby-remark-vscode",
+            options: {
+              theme: "Monokai"
+            }
           }
         ],
         rehypePlugins: [require("rehype-slug")]
