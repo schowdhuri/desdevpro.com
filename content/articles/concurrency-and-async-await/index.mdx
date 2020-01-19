@@ -1,0 +1,97 @@
+---
+category: blog
+date: "2018-02-05"
+coverImage: ES.png
+path: concurrency-and-async-await
+meta:
+  author: Subir Chowdhuri
+  description: You may be slowing down your code with async-await
+  keywords: javascript, async, await, concurrency
+summary: Could async/await be slowing down your code? Yeah, you read it right! With a little oversight, you may be inadvertently serializing parts of code which can otherwise run concurrently.
+tags:
+  - javascript
+title: Concurrency and async/await
+type: article
+updated: "2018-02-05"
+---
+
+async/await comes to JavaScript as a breath of fresh air, but it is easy to use it wrong. You may be serializing independent function calls that could run concurrently.
+
+
+Consider this code:
+
+```js
+  async function getAllUsers(idArr) {
+    const users = [];
+    for(let i=0; i<idArr.lengh; i++)
+      users.push(await find(idArr[i])); // find returns a Promise
+    return users;
+  }
+```
+
+At first, nothing may seem out of place. On closer inspection, one will realise that the 'find' calls are serialized. Each call waits for the previous to complete.
+
+
+How would promises work?
+
+```js
+  function getAllUsers(idArr) {
+    const pArr = idArr.map(id => find(id));
+    return Promise.all(users);
+  }
+```
+
+The right way using async/await would be:
+
+```js
+  async function getAllUsers(idArr) {
+    const pArr = idArr.map(id => find(id));
+    return await Promise.all(users);
+  }
+```
+
+Looking at another example:
+
+```js
+  function echoAfter(msg, seconds) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(msg);
+      }, seconds);
+    });
+  }
+  async function foo() {
+    const p1 = echoAfter("first", 10);
+    const p2 = echoAfter("second", 20);
+    const p3 = echoAfter("third", 30);
+
+    return await p1 + await p2 + await p3;
+  }
+```
+
+The function foo returns in 30 seconds. All three calls run concurrently because they were kicked off and running before being awaited.
+
+Now, foo is changed to look like this (line-breaks are for readability):
+
+```js
+  async function foo() {
+    return await echoAfter("first", 10) +
+      await echoAfter("second", 20) +
+      await echoAfter("third", 30);
+  }
+```
+
+The calls are no longer concurrent and foo returns after 50 seconds!
+
+If this confuses you, you might find awaiting Promise.all to be the safest:
+
+```js
+  async function foo() {
+    const p1 = echoAfter("first", 10);
+    const p2 = echoAfter("second", 20);
+    const p3 = echoAfter("third", 30);
+
+    const results = await Promise.all([ p1, p2, p3 ]);
+    return results.reduce((a, b) => a + b, "");
+  }
+```
