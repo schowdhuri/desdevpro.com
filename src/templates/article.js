@@ -100,6 +100,10 @@ const Wrapper = styled.article`
   }
   code {
     font-family: monospace;
+    font-size: 16px;
+    @media ${medium} {
+      font-size: 14px;
+    }
   }
   blockquote {
     background-color: ${colors.gray[0]};
@@ -135,6 +139,12 @@ const Wrapper = styled.article`
       width: 32px;
       z-index: 2;
     }
+  }
+  hr {
+    border: none;
+    background-color: ${colors.gray[2]};
+    height: 1px;
+    margin: 1rem 0;
   }
 `;
 const Metadata = styled.section`
