@@ -1,0 +1,145 @@
+---
+category: blog
+date: "2015-06-07"
+coverImage: ES.png
+path: es2015-the-bits-use-part-1
+meta:
+  author: Subir Chowdhuri
+  description: ES2015 features I use everyday
+  keywords: javascript, ES2015
+summary: "The JS landscape is changing. Everyone is talking about the big change - ES2015 (previously called ES6) is here and is already being adopted at a strong pace. This is a first of a multi-part article detailing the features of ES2015 which excite me the most!"
+tags:
+  - javascript
+  - ES2015
+title: "ES2015: The bits I use - Part 1"
+type: article
+updated: "2015-06-08"
+---
+
+ECMAScript 6 or ES6, now dubbed ECMAScript 2015, is the latest version of the ECMAScript standard. The last time the standard went through a radical change was way back in 2009 when ES5 was formalized. ES2015 brings big changes to the language. As you read this, support for the new standard is being built into browsers and JS engines.
+
+## What's new in ES2015?
+There is a bunch of new stuff in ES2015. A thorough discussion of every new feature is well beyond the scope of this article. Moreover, to keep the length of the article aligned to my attention span, I have broken it down into 2-minute-reads.  What follows is the first of several articles discussing the features which excite me the most!
+
+### Arrow Functions
+Users of CoffeeScript will recognise the familiar arrows. ES2015 Arrows are 'shorthand' function definitions. Arrow functions are a lean syntax to define **anonymous functions**.
+In its simplest form, an arrow function can be something like this:
+
+```js
+()=>{}
+// ES5 equivalent: function() {}
+```
+
+The 'function' keyword is dropped, leaving just the list of parameters within parentheses and the body, separate by the arrow.
+They support both expression and statement bodies.
+
+```js
+(x, y) => {
+  var z = 5;
+  return (x * y) + z;
+}
+```
+
+**ES5 equivalent**
+
+```js
+function(x, y){
+  var z = 5;
+  return (x * y) + z;
+}
+```
+
+----
+
+If you need only one parameter, the parentheses can be omitted. Also, if all you need is one statement inside the body, you can skip the braces too. The lone statement is evaluated and the result is returned automatically. Note that if the function body has multiple statements, no value is automatically returned.
+
+```js
+var numbers = [1,2,3,4,5,6,7,8,9];
+numbers.filter(x=> x%3==0); // [3, 6, 9]
+```
+
+**ES5 equivalent**
+
+```js
+n.filter(function (x) {
+  return x % 3 == 0;
+});
+```
+
+----
+
+Most importantly, *code inside the arrow function has the same lexical **this** as their surrounding code.* This means, goodbye Function.prototype.bind or var that = this! Here are some examples to illustrate this:
+
+**ES2015: Arrow function - lexical this binding**
+
+```js
+var counter = {
+  value : 0,
+  run : function(){
+      setInterval(() => {
+          this.value++;// note reference to outer this
+      }, 1000);
+  }
+};
+counter.run();
+```
+
+**ES5 equivalent**
+
+```js
+var counter = {
+  value: 0,
+  run: function run() {
+      var _this = this;
+      setInterval(function () {
+          _this.value++; // note reference to outer this
+      }, 1000);
+  }
+};
+counter.run();
+```
+
+Arrow functions, like regular functions are instances of Function
+
+```js
+var convert = fahr => (5*fahr - 160)/9;
+console.log(typeof convert); // function
+console.log(convert instanceof Function); // true
+// TypeError: not a constructor
+```
+
+Want to use arrow functions as immediately invokable function expressions (IIFE)?
+
+```js
+(fahr => (5*fahr - 160)/9)(98.4);
+```
+
+----
+
+## Caveats
+
+**1. Arrow functions can't be used as contructors**
+
+```js
+var convert = fahr => (5*fahr - 160)/9;
+var obj = new convert(98.4);
+// TypeError: not a constructor
+```
+
+**2. Using bind, apply or call on arrow functions has no effect**
+
+As mentioned above, the **this** object is lexically bound. Moreover, it can't be changed. Using bind, call or apply doesn't throw an error, but silently fails.
+
+## Notes
+#### JavaScript vs ECMAScript
+
+If you want to know the difference between ECMAScritpt and Javascript, I point you to [this StackOverflow answer](http://stackoverflow.com/a/30113184/2590862). Quoting from the answer, *"Javascript is considered the language which implements a standard called Ecmascript. There are also other languages that implement ECMAScript such as Lua (commonly used as a scripting language for games) and Actionscript (used for flash)"*.
+
+#### Is it ES6 or ES2015?
+
+As if we didn't have enough confusion already! The specification has been officially renamed to ES2015. Check out the [ECMAScript 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/). Note that the URL path still contains "6.0" :)
+
+The nomenclature has probably been debated on every ES forum:
+
+* [ES Discuss Thread](https://esdiscuss.org/topic/javascript-2015)
+* [StackOverflow](http://meta.stackoverflow.com/questions/297774/rename-es6-to-es2015)
