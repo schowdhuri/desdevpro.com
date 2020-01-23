@@ -1,0 +1,128 @@
+---
+category: blog
+date: "2015-06-08"
+coverImage: ES.png
+path: es2015-the-bits-use-part-2
+meta:
+  author: Subir Chowdhuri
+  description: ES2015 features I use everyday
+  keywords: javascript, ES2015
+summary: With ES2015, JavaScript now has native support for modules. Patterns from popular libraries such as AMD and CommonJS have been unified and formalized in ES2015.
+tags:
+  - javascript
+  - ES2015
+title: "ES2015: The bits I use - Part 2"
+type: article
+updated: "2015-06-08"
+---
+
+The concept of modules has been around for quite some time. Thanks to libraries such as RequireJS (my personal favourite) and Browserify, JS developers have had a way to write modular code for years. ES 2015 attempts to unify these patterns and make them native to JavaScript.
+
+## Defining a Module
+
+```js
+// stringLib.js
+export function join(a, b) {
+  return a+b;
+}
+
+// app.js
+import {join} from "stringLib";
+join("Hello, ", "world!");
+```
+
+Note that the file name is used for the name of the module. It should be obvious that there can be only one module definition per file. However, you are not limited by the number of items you can export from a module.
+
+### Multiple named exports:
+
+```js
+// stringLib.js
+export function join(a, b) {
+  return a+b;
+}
+export function search(needle, haystack) {
+  return haystack.indexOf(needle);
+}
+export var maxLen = 100;
+```
+
+### Default export
+
+```js
+// lib.js
+export default function () { }
+
+// app.js
+import foo from 'lib';
+foo();
+```
+
+Few of the examples export classes. A Class is another new feature in ES2015. More about classes in another part of this series.
+
+```js
+// vehicle.js
+export default class Vehicle{
+  drive() {
+    console.log("Driving...");
+  }
+}
+```
+
+## Re-export
+Re-export exports some or all members of another module, except the default export. This, in effect, extends the current module.
+
+```js
+// math.js
+export var pi = 3.14159;
+export var e = 2.71828182846;
+export function square(x) { return x*x; }
+export default function absVal(x) {
+  return x<0?-x:x;
+}
+
+// trig.js
+export * from "math";
+
+// myLib.js
+export {square} from "math";
+```
+
+#### Note
+
+1. **absVal** is never re-exported because it is the default export of the math module.
+2. A module can have one default export and any number of named exports. In fact, this is a very common pattern seen in JS libraries (eg: underscore).
+
+## Imports
+
+You can selectively import only the stuff you need from a module. Or you can import the entire module and put it in a namespace. The syntax somehow reminds me of Python :)
+
+### Default import
+
+```js
+import vehicle from "vehicle";
+```
+
+### Named import
+
+```js
+import {join, search} from "stringLib";
+```
+
+#### Importing default and named exports
+
+```js
+import myVar, {named1, named2} from "lib";
+```
+
+### Namespaced import
+
+```js
+import * as stringLib from "stringLib";
+import * as mathlib from "lib/math";
+```
+
+Note how the module identifier can accept relative paths. Of course, this can be used with any style of import.
+
+## End of the module wars?
+Some would argue that CommonJS won over AMD, while others see this as an ongoing debate. Nevertheless, ES2015 modules signal the beginning of the end of this long-standing debate.
+The [Module Loader specification](https://whatwg.github.io/loader/) was removed from ES2015, because it isn't ready yet. So, we are still at the mercy of Browserify, RequireJS and co in the immediate future.  If you are looking for material on CommonJS or AMD, look no further than Addy Osmani's excellent writeup, [Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http://addyosmani.com/writing-modular-js/).
