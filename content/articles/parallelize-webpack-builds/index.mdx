@@ -1,0 +1,169 @@
+---
+category: projects
+date: "2017-09-17"
+coverImage: webpack.jpg
+path: parallelize-webpack-builds
+meta:
+  author: Subir Chowdhuri
+  description: Speed up your webpack builds by buildings chunks concurrently
+  keywords: webpack, javascript
+summary: "The webpack build in one of my larger projects takes over 5 minutes to complete. I found an easy way to cut the build-time: running multiple builds in parallel!"
+tags:
+  - JavaScript
+  - Webpack
+title: Parallelize Webpack Builds
+type: article
+updated: "2017-09-17"
+---
+
+The webpack build in one of my larger projects takes over 5 minutes to complete. I found an easy way to cut the build-time: running multiple builds in parallel!
+
+__Disclaimer:__ This works because my webpack config has several independent entry points. My webpack config looks like this:
+
+```js
+import webpack from "webpack";
+import glob from "glob";
+
+const INIT_DIR = path.join(__dirname, "src", "init");
+const OUT_DIR = path.join(__dirname, "dist");
+
+const entryPoints = glob.sync(path.join(INIT_DIR, "*.js"))
+  .reduce((obj, filePath) => {
+    const pieces = path.parse(filePath);
+    return {
+      ...obj,
+      [pieces.name]: path.join(INIT_DIR, pieces.name)
+    };
+  }, {});
+
+export default {
+  entry: entryPoints,
+  output: {
+    path : OUT_DIR,
+    filename: "[name].min.js"
+  }
+};
+```
+
+The top-level JS entry points are contained in the folder __src/init__:
+
+```
+src/
+└── init/
+  ├── entry1.js
+  ├── entry2.js
+  └── entry3.js
+```
+
+The __entryPoints__ object would be:
+
+```js
+{
+  entry1: "src/init/entry1.js",
+  entry2: "src/init/entry2.js",
+  entry3: "src/init/entry3.js"
+}
+```
+
+Webpack generates a bundle out of each of these files and dumps them into the  __dist__ folder, appending __min.js__ to each bundle name.
+
+```
+src/
+├── init/
+│   ├── entry1.js
+│   ├── entry2.js
+│   └── entry3.js
+dist/
+    ├── entry1.min.js
+    ├── entry2.min.js
+    └── entry3.min.js
+```
+
+## The secret sauce
+Instead of each bundle making the others wait for it to finish compiling, I split up the workload and fire off multiple webpack processes in parallel. I set the number of splits to 4. Increasing it further didn't appear to improve build times much.
+
+```js
+import chalk from "chalk";
+import path from "path";
+import getopt from "node-getopt";
+import { exec } from "child_process";
+import webpack from "webpack";
+import config from "./webpack.config.prod";
+
+const args = getopt.create([
+    [ "", "procid=ARG", "Proc ID for parallel builds" ],
+    [ "", "help",  "display this help" ]
+  ])
+  .bindHelp()
+  .parseSystem();
+
+let procid = args.options.procid;
+const MAX_PROC = 4;
+
+const entryPoints = config.entry;
+const bundleNames = Object.keys(entryPoints);
+const QUEUE_SIZE = Math.ceil(bundleNames.length / MAX_PROC);
+
+if(!procid || isNaN(parseInt(procid))) {
+  console.log(chalk.cyan("Starting parallel webpack build ..."));
+  let children = 0;
+  for(let i=0; i<bundleNames.length; i+=QUEUE_SIZE) {
+    const cmd = `node_modules/.bin/babel-node build.js --procid=${i}`;
+    const child = exec(cmd, (error, stdout, stderr) => {
+      if (error) {
+        console.error(`${error}`);
+        return;
+      }
+      console.log(`${stdout}`);
+      console.log(`${stderr}`);
+    });
+    ++children;
+    child.on("close", () => {
+      --children;
+      if(children==0) {
+        console.log(chalk.cyan("All builds completed"));
+        console.log(chalk.green("Static file bundles generated"));
+      }
+    });
+  }
+} else {
+  procid = parseInt(procid);
+  config.entry = bundleNames.slice(procid, procid + QUEUE_SIZE).reduce((acc, cur) => {
+    return {
+      ...acc,
+      [cur]: config.entry[cur]
+    };
+  }, {})
+  webpack(config).run((error, stats) => {
+    if(error) {
+      console.error(chalk.red(error));
+      return 1;
+    }
+
+    const jsonStats = stats.toJson();
+    const stringStats = stats.toString(config.stats);
+
+    if (jsonStats.hasErrors) {
+      return jsonStats.errors.map(error => console.log(chalk.red(error)));
+    }
+    if (jsonStats.hasWarnings) {
+      console.log(chalk.yellow("Webpack generated the following warnings: "));
+      jsonStats.warnings.map(warning => console.log(chalk.yellow(warning)));
+    }
+    console.log(stringStats);
+  });
+}
+```
+
+Please note that my npm script and the webpack config use ES6. They will need __babel_node__ to run:
+
+```js
+{
+  "presets": [ "env", "stage-1" ]
+}
+```
+
+### Results
+My build time came down from __5m 2.364s__ to __2m 13.105s__.
+
+Nearly 50% improvement is pretty impressive for a 10 minute hack, eh?
