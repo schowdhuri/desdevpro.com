@@ -49,6 +49,13 @@ module.exports = {
             options: {
               theme: "Monokai"
             }
+          },
+          {
+          resolve:"@weknow/gatsby-remark-codepen",
+            options: {
+              theme: "dark",
+              height: 500
+            }
           }
         ],
         rehypePlugins: [require("rehype-slug")]
