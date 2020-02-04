@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import MagicGrid from "magic-grid";
 import { Link, graphql } from "gatsby";
@@ -7,10 +7,12 @@ import Layout from "../components/Layout";
 import { colors, fontSize, copySizeMobile, medium } from "../constants/theme";
 
 function Home(props) {
+  const [ cssLayout, setCssLayout ] = useState(true);
   useEffect(() => {
+    setCssLayout(false);
     const magicGrid = new MagicGrid({
       container: ".article-grid",
-      animate: true,
+      animate: false,
       gutter: 20,
       static: true,
       useMin: true,
@@ -24,7 +26,7 @@ function Home(props) {
   };
   return (
     <Layout config={config}>
-      <Feed className="article-grid">
+      <Feed className={`article-grid ${cssLayout ? "css-layout" : ""}`}>
         {props.data.allMdx.edges.map(({ node }) => (
           <Article key={node.id}>
             {!node.frontmatter.coverImage || (
@@ -58,11 +60,6 @@ function Home(props) {
   );
 }
 
-const Feed = styled.ul`
-  list-style-type: none;
-  margin: 2rem 1rem;
-  padding: 0;
-`;
 const Cover = styled.img`
   display: block;
   height: 200px;
@@ -90,6 +87,19 @@ const Article = styled.li`
   &:hover {
     ${Cover} {
       transform: scale(1.05);
+    }
+  }
+`;
+const Feed = styled.ul`
+  list-style-type: none;
+  margin: 2rem 1rem;
+  padding: 0;
+
+  &.css-layout {
+    display: flex;
+    flex-wrap: wrap;
+    ${Article} {
+      margin: 10px;
     }
   }
 `;
