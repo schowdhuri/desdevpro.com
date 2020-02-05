@@ -5,8 +5,6 @@ import {
   medium,
   colors,
   footerHeight,
-  contentWidth,
-  contentWidthMax,
   navbarCollapsedWidth
 } from "../constants/theme";
 
@@ -41,7 +39,7 @@ const Wrapper = styled.footer`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset;
   color: ${colors.gray[3]};
   display: flex;
-  padding: 40px 10px;
+  padding: 40px 1rem;
   position: relative;
   z-index: 10;
 
@@ -54,10 +52,8 @@ const Wrapper = styled.footer`
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: ${contentWidthMax};
     padding: 0;
     text-align: center;
-    width: ${contentWidth};
     @media ${medium} {
       flex-direction: row;
       font-size: 0.85em;
