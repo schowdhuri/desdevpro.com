@@ -21,8 +21,10 @@ function Home(props) {
     magicGrid.listen();
   }, []);
   const config = {
-    title: "Desdevpro | Experiments in open hardware and software",
-    meta: "Desdevpro | Experiments in open hardware and software"
+    title: "Desdevpro | Notes on my experiments with open hardware and software",
+    meta: {
+      description: "Desdevpro | Experiments in open hardware and software"
+    }
   };
   return (
     <Layout config={config}>
