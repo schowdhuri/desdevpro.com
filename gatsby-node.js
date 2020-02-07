@@ -2,15 +2,12 @@ const path = require("path");
 
 const articlesQuery = `
   query getArticles {
-    allMdx(filter: {frontmatter: {type: {eq:"article"}}}, limit: 1000) {
+    allMdx(filter: {frontmatter: {type: {eq:"article"}}}, sort: {order: DESC, fields: frontmatter___date}, limit: 1000) {
       edges {
         node {
           id
           excerpt(pruneLength:200)
           frontmatter {
-            title
-            summary
-            path
             category
             coverImage {
               childImageSharp {
@@ -19,6 +16,10 @@ const articlesQuery = `
                 }
               }
             }
+            date
+            title
+            path
+            summary
           }
         }
       }
@@ -75,12 +76,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     catArticles = [
       ...catArticles,
       {
-        id: node.id,
-        title: node.frontmatter.title,
-        summary: node.frontmatter.summary,
+        coverImage: node.frontmatter.coverImage,
+        date: node.frontmatter.date,
         excerpt: node.excerpt,
+        id: node.id,
         path: articlePath,
-        coverImage: node.frontmatter.coverImage
+        summary: node.frontmatter.summary,
+        title: node.frontmatter.title
       }
     ];
     catIndex.set(category, catArticles);

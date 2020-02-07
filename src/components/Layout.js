@@ -5,7 +5,12 @@ import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { footerHeight, small, navbarCollapsedWidth, headerHeight} from "../constants/theme";
+import {
+  footerHeight,
+  small,
+  navbarCollapsedWidth,
+  headerHeight
+} from "../constants/theme";
 
 function Layout(props) {
   const { config, children } = props;
@@ -17,7 +22,9 @@ function Layout(props) {
         <Helmet>
           <title>{config.title}</title>
           <meta name="description" content={config.meta.description} />
-          <meta name="keywords" content={config.meta.keywords} />
+          {!config.meta.keywords || (
+            <meta name="keywords" content={config.meta.keywords} />
+          )}
         </Helmet>
         {children}
       </Main>
