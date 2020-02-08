@@ -4,6 +4,7 @@ import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
+import { lighten } from "polished";
 
 import Figure from "../components/Figure";
 import Header from "../components/ArticleHeader";
@@ -145,6 +146,42 @@ const Wrapper = styled.article`
     background-color: ${colors.gray[2]};
     height: 1px;
     margin: 1rem 0;
+  }
+  table.table {
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    width: 100%;
+
+    th {
+      font-weight: bold;
+      padding: 12px 10px;
+    }
+    td {
+      padding: 6px 10px;
+    }
+  }
+  .table-bordered {
+    border-radius: 2px;
+    box-shadow: 1px 2px 16px -4px ${colors.gray[2]};
+    overflow: hidden;
+  }
+  .table-striped {
+    th {
+      background-color: ${colors.gray[1]};
+      text-align: left;
+    }
+    tbody tr:nth-child(odd) td {
+      background-color: ${colors.gray[0]};
+    }
+  }
+  .table-hover tbody tr:hover td {
+    background-color: ${lighten(0.4, colors.tertiary)};
+  }
+  .text-center, th.text-center {
+    text-align: center;
+  }
+  .text-right, th.text-right {
+    text-align: right;
   }
 `;
 const Metadata = styled.section`
