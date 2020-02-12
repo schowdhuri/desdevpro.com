@@ -20,6 +20,7 @@
     "@weknow/gatsby-remark-codepen": "^0.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.45",
+    "gatsby-plugin-gdpr-cookies": "^1.0.7",
     "gatsby-plugin-mdx": "^1.1.4",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sharp": "^2.5.3",

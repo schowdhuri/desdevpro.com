@@ -51,10 +51,20 @@ module.exports = {
             }
           },
           {
-          resolve:"@weknow/gatsby-remark-codepen",
+            resolve: "@weknow/gatsby-remark-codepen",
             options: {
               theme: "dark",
               height: 500
+            }
+          },
+          {
+            resolve: "gatsby-plugin-gdpr-cookies",
+            options: {
+              googleAnalytics: {
+                trackingId: "UA-57423728-1",
+                cookieName: "gatsby-gdpr-google-analytics",
+                anonymize: true
+              }
             }
           }
         ],
