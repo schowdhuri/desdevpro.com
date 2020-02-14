@@ -166,7 +166,7 @@ Misc.Date = styled.span`
 export const pageQuery = graphql`
   query articleFeed {
     allMdx(
-      limit: 10
+      limit: 20
       sort: { order: DESC, fields: frontmatter___date }
       filter: { frontmatter: { type: { eq: "article" } } }
     ) {
