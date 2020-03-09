@@ -29,6 +29,7 @@ function CategoryIndex(props) {
               <Cover
                 src={article.coverImage.childImageSharp?.sizes?.src}
                 alt={article.title}
+                loading="lazy"
               />
             )}
             <Preview>
@@ -89,6 +90,12 @@ const Article = styled.article`
 
   *:first-child {
     margin-top: 0;
+  }
+  em {
+    font-style: italic;
+  }
+  strong {
+    font-weight: bold;
   }
 `;
 

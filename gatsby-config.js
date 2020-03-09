@@ -66,7 +66,8 @@ module.exports = {
                 anonymize: true
               }
             }
-          }
+          },
+          "gatsby-remark-lazy-load"
         ],
         rehypePlugins: [require("rehype-slug")]
       }

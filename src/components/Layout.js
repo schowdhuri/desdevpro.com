@@ -22,9 +22,9 @@ function Layout(props) {
         <Helmet>
           <title>{config.title}</title>
           <meta name="description" content={config.meta.description} />
-          {!config.meta.keywords || (
+          {config.meta.keywords ? (
             <meta name="keywords" content={config.meta.keywords} />
-          )}
+          ) : null}
         </Helmet>
         {children}
       </Main>
