@@ -157,10 +157,11 @@ const Author = styled.section`
 `;
 Author.ProfilePhoto = styled.img`
   border-radius: 50%;
-  height: 128px;
-  width: 128px;
+  max-height: 128px;
+  max-width: 128px;
   @media ${medium} {
     align-self: start;
+    flex-basis: 100%;
   }
 `;
 const Name = styled.span`
