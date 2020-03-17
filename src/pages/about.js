@@ -13,13 +13,15 @@ import {
 
 function About() {
   const config = {
-    title: "About Desdevpro",
-    meta: "About Desdevpro"
+    title: "About Desdevpro | Subir Chowdhuri",
+    meta: {
+      description: "About Desdevpro - Subir Chowdhuri"
+    }
   };
   return (
     <Layout config={config}>
       <Helmet>
-        <meta name="author" content={"Subir"} />
+        <meta name="author" content="Subir Chowdhuri" />
       </Helmet>
       <Article>
         <Title>About</Title>

@@ -22,7 +22,7 @@ function CategoryIndex(props) {
   return (
     <Layout config={config}>
       <Wrapper>
-        <Title>{mdx.frontmatter.title}</Title>
+        <Title>Desdevpro | {mdx.frontmatter.title}</Title>
         {articles.map(article => (
           <Article key={article.id}>
             {!article.coverImage || (

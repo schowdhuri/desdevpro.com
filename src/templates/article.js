@@ -16,7 +16,7 @@ const shortcodes = { Link, Figure };
 function Article(props) {
   const mdx = props.data.mdx;
   const config = {
-    title: mdx.frontmatter.title,
+    title: `${mdx.frontmatter.title} | ${mdx.frontmatter.author} | Desdevpro`,
     meta: mdx.frontmatter.meta
   };
   return (
