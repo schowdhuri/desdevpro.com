@@ -30,6 +30,16 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-57423728-1",
+        head: false,
+        anonymize: false,
+        respectDNT: true,
+        exclude: []
+      }
+    },
+    {
       resolve: "gatsby-plugin-mdx",
       options: {
         gatsbyRemarkPlugins: [
@@ -55,16 +65,6 @@ module.exports = {
             options: {
               theme: "dark",
               height: 500
-            }
-          },
-          {
-            resolve: "gatsby-plugin-gdpr-cookies",
-            options: {
-              googleAnalytics: {
-                trackingId: "UA-57423728-1",
-                cookieName: "gatsby-gdpr-google-analytics",
-                anonymize: true
-              }
             }
           },
           "gatsby-remark-lazy-load"
