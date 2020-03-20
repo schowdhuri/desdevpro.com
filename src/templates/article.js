@@ -16,13 +16,13 @@ const shortcodes = { Link, Figure };
 function Article(props) {
   const mdx = props.data.mdx;
   const config = {
-    title: `${mdx.frontmatter.title} | ${mdx.frontmatter.author} | Desdevpro`,
+    title: `${mdx.frontmatter.title} | ${mdx.frontmatter.meta.author} | Desdevpro`,
     meta: mdx.frontmatter.meta
   };
   return (
     <Layout config={config}>
       <Helmet>
-        <meta name="author" content={mdx.frontmatter.author} />
+        <meta name="author" content={mdx.frontmatter.meta.author} />
       </Helmet>
       <Header
         title={mdx.frontmatter.title}
