@@ -10,7 +10,8 @@ coverImage: Cover.jpg # Optional
 path: article-slug # slug
 meta:
   author: Subir Chowdhuri
-  description: HTML description # HTML supported
+  description: meta description
+ summary: HTML description # HTML supported; used on the category landing page
 tags:
   - Hardware # The first tag is used on the landing page
   - Raspberry
@@ -27,7 +28,7 @@ title: Articles
 path: blog
 type: category # must be set to `category`
 meta:
-  description: Blog home
+  description: Blog home # plaintext
   keywords: projects, desdevpro
 ```
 
