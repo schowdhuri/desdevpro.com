@@ -11,7 +11,7 @@ tags:
   - Webdev
 title: Moving From Django to Gatsby
 type: article
-updated: "2020-03-21"
+updated: "2020-03-23"
 ---
 
 You are now looking at the fourth iteration of this website. In its current avatar, this is a static site, powered by Gatsby. I take a trip down the memory lane, reflecting upon how the tech behind this website has evolved, driven by changing needs, over the past 16 years.
@@ -55,19 +55,19 @@ I recently discovered [MDX](https://mdxjs.com/) and was totally hooked. Gatsby a
 ```
 /
 └── content
-       └───── articles
-       │         ├───── article-1
-       │         │         index.mdx
-       │         │         Cover.jpg
-       │         │
-       │         └───── article-2
-       │                    index.mdx
-       │                    Cover.jpg
-       │                    another-image.jpg
+       └── articles
+       │     ├── article-1
+       │     │   index.mdx
+       │     │   Cover.jpg
+       │     │
+       │     └── article-2
+       │             index.mdx
+       │             Cover.jpg
+       │             another-image.jpg
        │
        └── categories
-                 ├───── blog.mdx
-                 └───── projects.mdx
+             ├─── blog.mdx
+             └─── projects.mdx
 ```
 
 Every article would live in a dedicated subfolder under `/content/articles`. Static assets would live alongside the MDX files, and copied over to the `public` folder at build time. An article's attributes are defined as Markdown frontmatter. Here is the schema (for now; subject to change):
@@ -80,7 +80,7 @@ path: article-slug # slug
 meta:
   author: Subir Chowdhuri
   description: meta description
- summary: HTML description # HTML supported; used on the category landing page
+  summary: HTML description # HTML supported; used on the category landing page
 tags:
   - Hardware # The first tag is used on the landing page
   - Raspberry
