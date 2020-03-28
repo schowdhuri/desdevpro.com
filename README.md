@@ -32,6 +32,12 @@ meta:
   keywords: projects, desdevpro
 ```
 
+### Status
+
+1. `live`: Live post
+1. `draft`: Post can be accessed at its URL, but is not indexed
+1. `hidden`: Post skipped during the build process
+
 ## Development
 
 ### Dev Server

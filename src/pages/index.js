@@ -167,8 +167,20 @@ export const pageQuery = graphql`
   query articleFeed {
     allMdx(
       limit: 20
-      sort: { order: DESC, fields: frontmatter___date }
-      filter: { frontmatter: { type: { eq: "article" } } }
+      sort: {
+        order: DESC,
+        fields: frontmatter___date
+      }
+      filter: {
+        frontmatter: {
+          type: {
+            eq: "article"
+          }
+          status: {
+            eq: "live"
+          }
+        }
+      }
     ) {
       edges {
         node {

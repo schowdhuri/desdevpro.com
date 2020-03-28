@@ -2,7 +2,20 @@ const path = require("path");
 
 const articlesQuery = `
   query getArticles {
-    allMdx(filter: {frontmatter: {type: {eq:"article"}}}, sort: {order: DESC, fields: frontmatter___date}, limit: 1000) {
+    allMdx(
+      filter: {
+        frontmatter: {
+          type: {
+            eq:"article"
+          }
+        }
+      },
+      sort: {
+        order: DESC,
+        fields: frontmatter___date
+      },
+      limit: 1000
+    ) {
       edges {
         node {
           id
@@ -17,6 +30,7 @@ const articlesQuery = `
               }
             }
             date
+            status
             title
             path
             summary
@@ -29,7 +43,15 @@ const articlesQuery = `
 
 const categoriesQuery = `
   query getCategories {
-    allMdx(filter: {frontmatter: {type: {eq:"category"}}}) {
+    allMdx(
+      filter: {
+        frontmatter: {
+          type: {
+            eq:"category"
+          }
+        }
+      }
+    ) {
       edges {
         node {
           id
@@ -60,32 +82,36 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Article Pages
   articles.data.allMdx.edges.forEach(({ node }) => {
     const articlePath = `/${node.frontmatter.category}/${node.frontmatter.path}`;
-    createPage({
-      path: articlePath,
-      component: path.resolve("src/templates/article.js"),
-      context: {
-        id: node.id
-      }
-    });
-    // add to index
-    const category = node.frontmatter.category;
-    let catArticles = catIndex.get(category);
-    if (!catArticles) {
-      catArticles = [];
-    }
-    catArticles = [
-      ...catArticles,
-      {
-        coverImage: node.frontmatter.coverImage,
-        date: node.frontmatter.date,
-        excerpt: node.excerpt,
-        id: node.id,
+    if (node.frontmatter.status !== "hidden") {
+      createPage({
         path: articlePath,
-        summary: node.frontmatter.summary,
-        title: node.frontmatter.title
+        component: path.resolve("src/templates/article.js"),
+        context: {
+          id: node.id
+        }
+      });
+      // add to index
+      if (node.frontmatter.status !== "draft") {
+        const category = node.frontmatter.category;
+        let catArticles = catIndex.get(category);
+        if (!catArticles) {
+          catArticles = [];
+        }
+        catArticles = [
+          ...catArticles,
+          {
+            coverImage: node.frontmatter.coverImage,
+            date: node.frontmatter.date,
+            excerpt: node.excerpt,
+            id: node.id,
+            path: articlePath,
+            summary: node.frontmatter.summary,
+            title: node.frontmatter.title
+          }
+        ];
+        catIndex.set(category, catArticles);
       }
-    ];
-    catIndex.set(category, catArticles);
+    }
   });
   // Category Index
   categories.data.allMdx.edges.forEach(({ node }) => {
