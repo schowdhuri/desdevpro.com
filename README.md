@@ -5,13 +5,14 @@
 ### Article
 ```yml
 category: blog # must match one of the `catId` values (see Category)
-date: "2020-12-12" # ISO date
 coverImage: Cover.jpg # Optional
-path: article-slug # slug
+date: "2020-12-12" # ISO date
 meta:
   author: Subir Chowdhuri
   description: meta description
- summary: HTML description # HTML supported; used on the category landing page
+status: live
+summary: HTML description # HTML supported; used on the category landing page
+path: article-slug # slug
 tags:
   - Hardware # The first tag is used on the landing page
   - Raspberry
