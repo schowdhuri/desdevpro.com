@@ -26,13 +26,9 @@ function About() {
       <Article>
         <Title>About</Title>
         <p>
-          I conceived Desdevpro way back in 2004, starting out as an amateur
-          graphics and web designer. The origins can be traced back to early
-          2003 when a group of like-minded coding enthusiasts got together to
-          work on project ideas.
-        </p>
-
-        <p>
+          The origins of Desdevpro can be traced back to early 2003 when a group
+          of like-minded coding enthusiasts teamed up to enter a software
+          development contest (long before the word, 'Hackathon' was coined!).
           What started as an after-school hobby club, with purely academic
           intent, attracted a flurry of commercial projects. We went
           professional, under the banner of 'Desdevpro'. Starting with desktop
@@ -42,20 +38,20 @@ function About() {
         </p>
 
         <p>
-          Now, this serves as my space to share notes from my experiments with
-          all kinds of tech, as I juggle my time between working a day job as a
-          web-developer and my pet projects.
+          Now, this serves as my space to share my thoughts and notes from my
+          experiments, as I juggle my time between working a day job as a
+          web-developer and my numerous side-projects.
         </p>
 
         <Author>
           <Author.ProfilePhoto src="/images/Subir.jpg" alt="Subir Chowdhuri" />
           <p>
-            I am a web-developer, CG enthusiast, hardware hacker, avid DIYer and
+            I am a web-developer, hardware hacker, CG enthusiast, avid DIYer and
             a big proponent of free (as in beer) sharing of knowledge. Can hold
-            my end of a conversation on robotics, Raspberry Pi, amateur
-            astronomy, photography, amateur radio and 3D modeling. On my days
-            off, if I am not working on one of my side-projects, I can be found
-            on a nearby hiking trail. .<Name>Subir Chowdhuri</Name>
+            my end of a conversation on Raspberry Pi, photography, robotics,
+            amateur astronomy, amateur radio and 3D modeling. On my days off, if
+            I am not working on one of my pet projects, I can be found on a
+            nearby hiking trail.<Name>Subir Chowdhuri</Name>
             <Links>
               <li>
                 <a
