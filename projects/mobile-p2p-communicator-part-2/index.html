@@ -1,0 +1,239 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.19.45"/><title data-react-helmet="true">Mobile P2P Communicator - Part 2</title><meta data-react-helmet="true" name="description" content="Exploring options for a wifi-based, P2P handheld radio"/><meta data-react-helmet="true" name="keywords" content="hardware, radio, hiking"/><meta data-react-helmet="true" name="author"/><style data-styled="" data-styled-version="5.0.1">.fpOhBx{margin:2em 0;}
+.fpOhBx .gatsby-resp-image-wrapper{background-color:#fff;border:solid 1px #e3e3e4;border-radius:2px;box-shadow:1px 1px 4px #e9edee;cursor:pointer;padding:4px;}
+.fpOhBx a{position:relative;}
+.fpOhBx p{margin:0 !important;padding:0 !important;}
+.fpOhBx img{background-color:#fff;box-sizing:border-box;}
+.fpOhBx figcaption{background-color:#fff;border:solid 1px #e9edee;border-radius:0 0 2px 2px;border-top:none;box-shadow:1px 3px 4px #e9edee;box-sizing:border-box;color:#606061;font-size:0.85em;margin:0 auto;max-width:600px;padding:22px 10px 20px;position:relative;top:-2px;width:100%;z-index:2;}
+.bqgQkZ{margin:2em 0;}
+.bqgQkZ .gatsby-resp-image-wrapper{background-color:#fff;border:solid 1px #e3e3e4;border-radius:2px;box-shadow:1px 1px 4px #e9edee;cursor:pointer;padding:4px;}
+.bqgQkZ a{position:relative;}
+.bqgQkZ p{margin:0 !important;padding:0 !important;}
+.bqgQkZ img{background-color:#fff;box-sizing:border-box;}
+.bqgQkZ figcaption{background-color:#fff;border:solid 1px #e9edee;border-radius:0 0 2px 2px;border-top:none;box-shadow:1px 3px 4px #e9edee;box-sizing:border-box;color:#606061;font-size:0.85em;margin:0 auto;max-width:600px;padding:22px 10px 20px;position:relative;top:-2px;width:100%;z-index:2;}
+.bqgQkZ img{border:solid 1px #e3e3e4;display:block;margin:0 auto;padding:4px;max-width:610px;width:100%;}
+data-styled.g1[id="Figure__Fig-sc-71uj2s-0"]{content:"fpOhBx,bqgQkZ,"}
+.bULtip{background-color:#606060;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-image:url(/static/45d49859dd066206f9b3970b866f9253/wifi_test_equipment.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;height:300px;left:0;position:fixed;right:0;top:70px;z-index:2;}
+@media all and (min-width:800px){.bULtip{top:0;}}
+data-styled.g2[id="ArticleHeader__Wrapper-sc-13d0y20-0"]{content:"bULtip,"}
+.jviBKF{color:#fafafa;font-size:32px;font-weight:400;max-width:50rem;position:relative;text-shadow:2px 2px 6px #000;width:90vw;z-index:2;}
+@media all and (min-width:800px){.jviBKF{font-size:48px;margin-left:60px;padding:0 1rem;}}
+data-styled.g3[id="ArticleHeader__Title-sc-13d0y20-1"]{content:"jviBKF,"}
+.jXknIo{background:#404041 url("/images/Pattern1.png") repeat;bottom:0;left:0;opacity:0.5;position:absolute;right:0;top:0;z-index:1;}
+data-styled.g4[id="ArticleHeader__Overlay-sc-13d0y20-2"]{content:"jXknIo,"}
+.fyfowu{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+@media all and (min-width:800px){.fyfowu{display:block;margin:0 0 0 12px;position:absolute;top:20px;width:205px;}}
+@media all and (max-width:799px){.fyfowu svg{height:55px;}}
+.fyfowu path{fill:#8cc63e;}
+.fyfowu text{display:inline-block;fill:#e9edee;font-family:vezuslight,sans-serif,sans;font-size:2rem;}
+@media all and (min-width:800px){.fyfowu text{font-size:2.25rem;}}
+data-styled.g5[id="Navbar__Logo-djt26d-0"]{content:"fyfowu,"}
+.kPXToL{background:none;border:none;box-shadow:none;color:#cacaca;float:right;font-size:1.5rem;padding:0;-webkit-transform:translate(5px,70%);-ms-transform:translate(5px,70%);transform:translate(5px,70%);}
+@media all and (min-width:800px){.kPXToL{display:none;}}
+data-styled.g6[id="Navbar__BtnMenu-djt26d-1"]{content:"kPXToL,"}
+.fdRXRq{background-color:#404041;box-shadow:2px 0 4px #2f2f37;overflow:hidden;padding:0.5rem 1rem;position:fixed;-webkit-transition:width 0.2s ease 0s;transition:width 0.2s ease 0s;z-index:9;left:0;top:0;right:0;}
+@media all and (min-width:800px){.fdRXRq{bottom:0;box-shadow:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;left:0;padding:0;right:auto;top:0;width:60px;}.fdRXRq:hover{width:230px;-webkit-transition:width 0.3s;transition:width 0.3s;}.fdRXRq:hover a{color:#e9edee;-webkit-transition:color 0.3s;transition:color 0.3s;}}
+data-styled.g7[id="Navbar__Nav-djt26d-2"]{content:"fdRXRq,"}
+.goGzKx{list-style-type:none;margin:0 0 0 -0.5rem;padding:0;display:none;}
+@media all and (min-width:800px){.goGzKx{display:block;margin:50px 0;}}
+.goGzKx > li{border:1px solid transparent;}
+.goGzKx > li > a{color:#cacaca;display:block;line-height:4em;padding-left:0;-webkit-text-decoration:none;text-decoration:none;text-transform:uppercase;white-space:nowrap;}
+@media all and (min-width:800px){.goGzKx > li > a{padding-left:10px;}}
+.goGzKx > li > a > i{font-size:1.7em;vertical-align:middle;display:inline-block;width:50px;}
+.goGzKx > li a.active,.goGzKx > li a.active:hover{color:#8cc63e;}
+.goGzKx > li:hover{background-color:#404041;color:#cacaca;-webkit-transition:box-shadow 0.4s,background-color 0.4s;transition:box-shadow 0.4s,background-color 0.4s;}
+@media all and (min-width:800px){.goGzKx > li:hover{border-bottom:solid 1px #989ba4;border-top:solid 1px #989ba4;box-shadow:0 0 4px #606060;}}
+data-styled.g8[id="Navbar__Links-djt26d-3"]{content:"goGzKx,"}
+.ihJeNY{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#e9edee;box-shadow:0 4px 8px 0 rgba(0,0,0,0.2) inset;color:#989ba4;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding:40px 10px;position:relative;z-index:10;}
+@media all and (min-width:800px){.ihJeNY{height:150px;}}
+.ihJeNY .license{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin:0 auto;max-width:50rem;padding:0;text-align:center;width:90vw;}
+@media all and (min-width:800px){.ihJeNY .license{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;font-size:0.85em;padding-left:60px;text-align:left;}}
+data-styled.g9[id="Footer__Wrapper-sc-8vmaik-0"]{content:"ihJeNY,"}
+.bTmRDJ{margin:0 auto 20px;}
+@media all and (min-width:800px){.bTmRDJ{margin:0 10px 0 0;}}
+.bTmRDJ img{border:none;display:block;}
+data-styled.g10[id="Footer__LicenseLink-sc-8vmaik-1"]{content:"bTmRDJ,"}
+.gZYBjr{min-height:100vh;min-height:calc(100vh - 150px);padding-left:60px;padding-bottom:2rem;}
+@media all and (max-width:799px){.gZYBjr{padding-top:70px;padding-top:calc(70px + 1rem);padding-left:0;}}
+data-styled.g11[id="Layout__Main-sc-1l6nbaj-0"]{content:"gZYBjr,"}
+.iCRdPF{background:#f2f2f2;padding:2rem 0 4rem;position:relative;z-index:5;margin-top:300px;}
+@media all and (min-width:800px){.iCRdPF{padding:4rem 1rem;}}
+.iCRdPF h2,.iCRdPF h3,.iCRdPF h4,.iCRdPF h5{margin:1.5em 0 0.5em;}
+.iCRdPF .image-center{display:block;margin:20px auto;}
+.iCRdPF ol{list-style:decimal;}
+.iCRdPF ul{list-style:square;}
+.iCRdPF ol,.iCRdPF ul{margin:10px 0;padding-left:2rem;}
+.iCRdPF p{margin:10px 0;}
+.iCRdPF strong{font-weight:700;}
+.iCRdPF em{font-style:italic;}
+.iCRdPF code{font-family:monospace;font-size:16px;}
+@media all and (min-width:800px){.iCRdPF code{font-size:14px;}}
+.iCRdPF blockquote{background-color:#fafafa;border-radius:2px;box-shadow:2px 0 16px -4px rgba(128,128,128,0.2);color:#606060;margin:40px 0;padding:40px 40px 40px 60px;position:relative;z-index:1;}
+.iCRdPF blockquote::before{background:#2aabe4;content:" ";display:block;left:10px;height:32px;-webkit-mask:url("/images/quote.svg");mask:url("/images/quote.svg");position:absolute;top:10px;-webkit-transform:scale(-1);-ms-transform:scale(-1);transform:scale(-1);width:32px;z-index:2;}
+.iCRdPF blockquote::after{background:#2aabe4;bottom:10px;content:" ";height:32px;-webkit-mask:url("/images/quote.svg");mask:url("/images/quote.svg");position:absolute;right:10px;width:32px;z-index:2;}
+.iCRdPF hr{border:none;background-color:#cacaca;height:1px;margin:1rem 0;}
+data-styled.g12[id="article__Wrapper-sc-1a9ma3j-0"]{content:"iCRdPF,"}
+.bviVYe{color:#989ba4;margin-bottom:2rem;}
+@media all and (min-width:800px){.bviVYe{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:0.9rem;}}
+.bviVYe dl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-bottom:10px;text-transform:uppercase;}
+@media all and (max-width:799px){.bviVYe dl{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.bviVYe dl dt:nth-child(3n){-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;margin-top:20px;}}
+.bviVYe dt{font-weight:600;margin-right:5px;}
+.bviVYe dd{margin-right:1em;}
+data-styled.g13[id="article__Metadata-sc-1a9ma3j-1"]{content:"bviVYe,"}
+.hzTfpF{margin:0 auto;max-width:50rem;width:90vw;}
+data-styled.g14[id="article__Content-sc-1a9ma3j-2"]{content:"hzTfpF,"}
+@font-face{font-family:"vezuslight";src:url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.eot");src:url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.woff2") format("woff2"), url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.woff") format("woff"), url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.ttf") format("truetype");font-weight:normal;font-style:normal;}
+@font-face{font-family:"corbertregular";font-style:normal;font-weight:normal;src:url("/fonts/corbert/corbert_regular_regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/corbert/corbert_regular_regular-webfont.woff") format("woff"), url("/fonts/corbert/corbert_regular_regular-webfont.ttf") format("truetype"), url("/fonts/corbert/corbert_regular_regular-webfont.svg#corbertregular") format("svg");}
+@font-face{font-family:"Clear Sans Light";src:url("/fonts/clear-sans/ClearSans-Light.eot?12387945");src:url("/fonts/clear-sans/ClearSans-Light.eot?12387945#iefix") format("embedded-opentype"), url("/fonts/clear-sans/ClearSans-Light.woff?12387945") format("woff"), url("/fonts/clear-sans/ClearSans-Light.ttf?12387945") format("truetype"), url("/fonts/clear-sans/ClearSans-Light.svg?12387945#ClearSans-Light") format("svg");font-weight:normal;font-style:normal;}
+@font-face{font-family:"ddpicons";src:url("/fonts/ddpicons/ddpicons.eot?25466695");src:url("/fonts/ddpicons/ddpicons.eot?25466695#iefix") format("embedded-opentype"), url("/fonts/ddpicons/ddpicons.woff?25466695") format("woff"), url("/fonts/ddpicons/ddpicons.ttf?25466695") format("truetype"), url("/fonts/ddpicons/ddpicons.svg?25466695#ddpicons") format("svg");font-weight:normal;font-style:normal;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:"";content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+[class^="icon-"]:before,[class*=" icon-"]:before{font-family:"ddpicons";font-style:normal;font-weight:normal;speak:none;display:inline-block;-webkit-text-decoration:inherit;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;}
+.icon-users:before{content:"\e801";}
+.icon-mail:before{content:"\e802";}
+.icon-mail-filled:before{content:"\e803";}
+.icon-home:before{content:"\e805";}
+.icon-info-circled:before{content:"\e806";}
+.icon-angle-down:before{content:"\e807";}
+.icon-globe:before{content:"\e808";}
+.icon-book:before{content:"\e809";}
+.icon-search:before{content:"\e80b";}
+.icon-time:before{content:"\e80c";}
+.icon-user:before{content:"\e80d";}
+.icon-hamburger:before{content:"\e80e";}
+.icon-tags:before{content:"\e810";}
+.icon-angle-up:before{content:"\e811";}
+.icon-tag:before{content:"\e812";}
+.icon-cancel:before{content:"\e813";}
+.icon-ok:before{content:"\e814";}
+.icon-upload:before{content:"\e815";}
+.icon-folder:before{content:"\e816";}
+.icon-facebook:before{content:"\e817";}
+.icon-twitter:before{content:"\e818";}
+.icon-data-science:before{content:"\e81a";}
+.icon-rocket:before{content:"\e81b";}
+.icon-flask:before{content:"\e81c";}
+.icon-calendar:before{content:"\e81d";}
+*{box-sizing:border-box;}
+body{background-color:#f2f2f2;color:#404040;font-family:"Clear Sans Light",sans-serif,sans;font-weight:300;line-height:1.6;}
+h1,h2,h3,h4,h5{font-weight:600;font-family:"corbertregular",sans-serif,sans;line-height:1.25;}
+h1{font-size:28px;}
+h2{font-size:24px;}
+@media all and (min-width:800px){h2{font-size:28px;}}
+h3{font-size:28px;}
+@media all and (min-width:800px){h3{font-size:24px;}}
+h4{font-size:18px;}
+h5{font-size:16px;}
+a{color:#ee0072;}
+.btn{background-color:#2aabe4;border-radius:2px;box-shadow:1px 1px 2px rgba(0,0,0,0.2);color:#fff;display:inline-block;font-size:16px;font-weight:300;padding:0.75rem 1.25rem;-webkit-text-decoration:none;text-decoration:none;text-transform:uppercase;}
+@media all and (min-width:800px){.btn{font-size:14px;}}
+.btn:hover{background-color:#198ec2;-webkit-transition:background-color 0.5s;transition:background-color 0.5s;}
+a.btn,a.btn:link,a.btn:focus,a.btn:visited{color:#fff;}
+data-styled.g38[id="sc-global-dBFHXm1"]{content:"sc-global-dBFHXm1,"}
+</style><title>Desdevpro | Notes on my experiments with open hardware and software</title><link rel="shortcut icon" type="image/png" href="/favicon.png"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link as="script" rel="preload" href="/app-888e9819e65744ba9d6f.js"/><link as="script" rel="preload" href="/component---src-templates-article-js-2c752f34bd83f235a1b0.js"/><link as="script" rel="preload" href="/commons-24b929084ab5942b8a57.js"/><link as="script" rel="preload" href="/webpack-runtime-fea58a8241ba96d79d16.js"/><link as="fetch" rel="preload" href="/page-data/projects/mobile-p2p-communicator-part-2/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><nav class="Navbar__Nav-djt26d-2 fdRXRq"><button class="Navbar__BtnMenu-djt26d-1 kPXToL icon icon-hamburger"></button><div class="Navbar__Logo-djt26d-0 fyfowu"><a href="/"><svg viewBox="0 0 304.7 81.162"><g transform="translate(-1.262,-973.124)"><path d="m50.916,1025.2c0-22.739,2.6003-49.859-36.076-50.076,0,0,30.668,1.1835,28.493,29.426,0,0,8.1146-3.4063-16.168-3.4063-23.42,0-23.903,0.8631-23.903,24.056,0,23.627,0.45143,24.056,23.29,24.056,24.572,0,24.363-0.7653,24.363-24.056z"></path><text y="1040.3662" x="70.750862">Desdevpro</text></g></svg></a></div><ul itemProp="breadcrumb" itemscope="" itemType="http://schema.org/BreadcrumbList" class="Navbar__Links-djt26d-3 goGzKx"><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a href="/"><i class="icon icon-home"></i><span itemProp="name">Home</span></a></li><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a itemProp="item" class="active" href="/projects"><i class="icon icon-flask"></i><span itemProp="name">Projects</span></a></li><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a itemProp="item" href="/blog"><i class="icon icon-book"></i><span itemProp="name">Articles</span></a></li><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a itemProp="item" href="/about"><i class="icon icon-info-circled"></i><span itemProp="name">About</span></a></li></ul></nav><main class="Layout__Main-sc-1l6nbaj-0 gZYBjr"><header class="ArticleHeader__Wrapper-sc-13d0y20-0 bULtip"><h1 class="ArticleHeader__Title-sc-13d0y20-1 jviBKF">Mobile P2P Communicator - Part 2</h1><div class="ArticleHeader__Overlay-sc-13d0y20-2 jXknIo"></div></header><article class="article__Wrapper-sc-1a9ma3j-0 iCRdPF"><div class="article__Content-sc-1a9ma3j-2 hzTfpF"><section class="article__Metadata-sc-1a9ma3j-1 bviVYe"><dl><dt><i class="icon icon-calendar"></i>Published:</dt><dd>Jan 05, 2020</dd></dl></section><p>Previously, I <a href="/projects/mobile-p2p-communicator-part-1">wrote</a>
+about my hiking misadventure that inspired me to start this project.
+I have high hopes from wifi as a carrier for my long range radio comm devices.
+Before I get too ahead of myself, it would be best to do a range test with a
+directional antenna.</p><h2 id="choosing-an-antenna">Choosing an Antenna</h2><p>A quick word about <strong>Antenna Rating</strong>. Antennas are rated with a parameter called Power Gain, measured in decibels (dB), which tells us about its effectiveness compared to that of a standard reference antenna. Manufacturers usually quote a value called dBi for measuring the strength of an antenna. dBi is the gain of an antenna compared to that of an Isotropic radiator (a hypothetical antenna that radiates equally in all directions). The higher the dBi value, greater is the area of coverage.</p><h3 id="omnidirectional">Omnidirectional</h3><figure class="Figure__Fig-sc-71uj2s-0 fpOhBx"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/b484d58d94f7f6306eba19528d79c420/b4294/Omni_Antenna.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:69.33333333333334%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Omnidirectional Antenna" title="Omnidirectional Antenna" src="/static/b484d58d94f7f6306eba19528d79c420/b4294/Omni_Antenna.jpg" srcSet="/static/b484d58d94f7f6306eba19528d79c420/75985/Omni_Antenna.jpg 150w,/static/b484d58d94f7f6306eba19528d79c420/f93b5/Omni_Antenna.jpg 300w,/static/b484d58d94f7f6306eba19528d79c420/b4294/Omni_Antenna.jpg 600w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p></figure><p>Commonly seen in home routers and handheld radios. Omni antennas radiate equal
+radio power in all directions perpendicular to an axis. Power declines to zero
+on the axis. Graphed in 3D, the radiation pattern resembles a donut.</p><img style="max-width:200px" class="image-center" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/L-over2-rad-pat-per.jpg" alt="Omni Antenna Wave Pattern"/><p>Image: <a href="https://commons.wikimedia.org/wiki/File:L-over2-rad-pat-per.jpg">Wikipedia</a></p><p>Omni antennas are well-suited to home or office usage, where you might to set it
+up in a central location and expect coverage all around. My use case, however,
+requires longer range in a <em>particular direction.</em> Imagine taking the donut above
+and stretching it far, far to the right. That would be a job for a directional antenna.</p><h3 id="parabolic-antenna">Parabolic Antenna</h3><figure class="Figure__Fig-sc-71uj2s-0 fpOhBx"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/6c9db5abddc493ec64e9bf38834a4f40/b4294/parabolic_antenna.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:75.33333333333333%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Parabolic Antenna" title="Parabolic Antenna" src="/static/6c9db5abddc493ec64e9bf38834a4f40/b4294/parabolic_antenna.jpg" srcSet="/static/6c9db5abddc493ec64e9bf38834a4f40/75985/parabolic_antenna.jpg 150w,/static/6c9db5abddc493ec64e9bf38834a4f40/f93b5/parabolic_antenna.jpg 300w,/static/6c9db5abddc493ec64e9bf38834a4f40/b4294/parabolic_antenna.jpg 600w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p></figure><p>The signal, fed at its focus, gets reflected as a narrow, parallel beam. The beam
+spreads very little over distance. Such a collated beam makes it important to &#x27;aim&#x27;
+the antenna right, or else you might end up in a dead zone.</p><figure class="Figure__Fig-sc-71uj2s-0 bqgQkZ"><p><img src="/static/parabolic_reflector.svg" alt="Parabolic Reflector"/></p></figure><p>Seems perfect for my use case.</p><h3 id="yagi-antenna">Yagi Antenna</h3><p>Originally designed as a radio and TV antenna, the Yagi is often used for 802.11 wifi.
+It can provide staggering high signal strength, especially when used outdoors.</p><figure class="Figure__Fig-sc-71uj2s-0 fpOhBx"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/463e0d1af3d713ff660c56931c0ec2aa/b4294/yagi_antenna.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:75.33333333333333%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Yagi Antenna" title="Yagi Antenna" src="/static/463e0d1af3d713ff660c56931c0ec2aa/b4294/yagi_antenna.jpg" srcSet="/static/463e0d1af3d713ff660c56931c0ec2aa/75985/yagi_antenna.jpg 150w,/static/463e0d1af3d713ff660c56931c0ec2aa/f93b5/yagi_antenna.jpg 300w,/static/463e0d1af3d713ff660c56931c0ec2aa/b4294/yagi_antenna.jpg 600w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p></figure><p>The Yagi antenna is very cheap and simple to construct. With the right specs, it can
+supposedly achieve terrific signal gain! Downside: the wave pattern is <em>very</em> narrow
+and <em>highly</em> directional.</p><figure class="Figure__Fig-sc-71uj2s-0 bqgQkZ"><p><img src="/static/yagi_wavepattern_opt.svg" alt="Yagi Wave Pattern"/></p></figure><p>Even off by a few degrees, you might find yourself out of the cone.
+While at close range, it could be hard to lock on to the Yagi&#x27;s signal. The coverage
+improves over long distances.</p><p>I decided to go with the Yagi for my first trial run because it is very cheap and
+easily available.</p><h2 id="the-build">The Build</h2><p>Here&#x27;s the stuff I gathered:</p><figure class="Figure__Fig-sc-71uj2s-0 fpOhBx"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/45d49859dd066206f9b3970b866f9253/31be4/wifi_test_equipment.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:77.33333333333333%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Wifi Test Equipment" title="Wifi Test Equipment" src="/static/45d49859dd066206f9b3970b866f9253/b4294/wifi_test_equipment.jpg" srcSet="/static/45d49859dd066206f9b3970b866f9253/75985/wifi_test_equipment.jpg 150w,/static/45d49859dd066206f9b3970b866f9253/f93b5/wifi_test_equipment.jpg 300w,/static/45d49859dd066206f9b3970b866f9253/b4294/wifi_test_equipment.jpg 600w,/static/45d49859dd066206f9b3970b866f9253/31be4/wifi_test_equipment.jpg 806w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p></figure><ul><li>TP Link TL-WR720N router - literally the cheapest I could find</li><li>Yagi antenna rated 16dBi for 2.4GHz wifi</li><li>RP SMA Connectors</li><li>Shielded cables</li></ul><h3 id="router-teardown">Router Teardown</h3><p>Cracked the router open and desoldered the omni antenna</p><figure class="Figure__Fig-sc-71uj2s-0 fpOhBx"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/c610dc830e8878e5a37d52572f2c87cf/8b5c7/router_teardown.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:78.66666666666667%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Router Teardown" title="Router Teardown" src="/static/c610dc830e8878e5a37d52572f2c87cf/b4294/router_teardown.jpg" srcSet="/static/c610dc830e8878e5a37d52572f2c87cf/75985/router_teardown.jpg 150w,/static/c610dc830e8878e5a37d52572f2c87cf/f93b5/router_teardown.jpg 300w,/static/c610dc830e8878e5a37d52572f2c87cf/b4294/router_teardown.jpg 600w,/static/c610dc830e8878e5a37d52572f2c87cf/8e1fc/router_teardown.jpg 900w,/static/c610dc830e8878e5a37d52572f2c87cf/8b5c7/router_teardown.jpg 1038w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p></figure><p>Replaced the omni antenna with a male RP-SMA connector via a small stretch of shielded cable.
+A dab of steel glue later, the connector fits nicely in the slot for the antenna</p><figure class="Figure__Fig-sc-71uj2s-0 fpOhBx"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/c58a7c0d23dc2b4a18954f87f07194e7/9d222/router_rpsma.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:65.33333333333333%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Router RPSMA" title="Router RPSMA" src="/static/c58a7c0d23dc2b4a18954f87f07194e7/b4294/router_rpsma.jpg" srcSet="/static/c58a7c0d23dc2b4a18954f87f07194e7/75985/router_rpsma.jpg 150w,/static/c58a7c0d23dc2b4a18954f87f07194e7/f93b5/router_rpsma.jpg 300w,/static/c58a7c0d23dc2b4a18954f87f07194e7/b4294/router_rpsma.jpg 600w,/static/c58a7c0d23dc2b4a18954f87f07194e7/8e1fc/router_rpsma.jpg 900w,/static/c58a7c0d23dc2b4a18954f87f07194e7/9d222/router_rpsma.jpg 1128w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p></figure><p>Here&#x27;s the Yagi antenna&#x27;s SMA cable, connected to the router:</p><figure class="Figure__Fig-sc-71uj2s-0 fpOhBx"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/b11b7ccf0af258e16184fb5eb0f8cadf/b4294/Router_SMA_Cable.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:48%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Router SMA Cable" title="Router SMA Cable" src="/static/b11b7ccf0af258e16184fb5eb0f8cadf/b4294/Router_SMA_Cable.jpg" srcSet="/static/b11b7ccf0af258e16184fb5eb0f8cadf/75985/Router_SMA_Cable.jpg 150w,/static/b11b7ccf0af258e16184fb5eb0f8cadf/f93b5/Router_SMA_Cable.jpg 300w,/static/b11b7ccf0af258e16184fb5eb0f8cadf/b4294/Router_SMA_Cable.jpg 600w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p></figure><h2 id="the-test">The Test</h2><p>I found a location with minimal wifi interference (such places
+are getting rarer by the day!) and hooked up my router and yagi setup. The idea is
+to use a mobile app called <a href="http://www.wifianalyzer.info/">Wifi Analyzer</a>
+to measure the signal strength as I walk away from the antenna, in the direction
+it points.</p><h3 id="epic-fail">Epic Fail!</h3><figure class="Figure__Fig-sc-71uj2s-0 fpOhBx"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:434px">
+      <a class="gatsby-resp-image-link" href="/static/757498f973117b4c2d01bb3f33766afb/57fda/wifi_test.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:171.33333333333331%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Wifi Analyzer Test 01" title="Wifi Analyzer Test 01" src="/static/757498f973117b4c2d01bb3f33766afb/57fda/wifi_test.jpg" srcSet="/static/757498f973117b4c2d01bb3f33766afb/75985/wifi_test.jpg 150w,/static/757498f973117b4c2d01bb3f33766afb/f93b5/wifi_test.jpg 300w,/static/757498f973117b4c2d01bb3f33766afb/57fda/wifi_test.jpg 434w" sizes="(max-width: 434px) 100vw, 434px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p></figure><p>To my sheer surprise and disappointment, all I detected was a <em>very</em> weak signal, even
+while in the same room as the antenna. As I walked out and further away, the signal
+dropped fast to ZERO! Several repeated tests turned up with similar results.</p><p>At one point, I re-connected the omni antenna that came with the router. It actually
+performed better than the yagi!</p><h3 id="possible-reasons">Possible Reasons</h3><p>There has to be something I am doing wrong. My guesses:</p><ol><li>The router and the Yagi are incompatible. I have some vague memories of the relation between wavelength and dipole antenna length. Though, my  Yagi is rated for 2.4GHz wifi, perhaps the router is &#x27;tuned&#x27; to the omni it comes with</li><li>Faulty Yagi? I measured continuity between the terminals of the Yagi. There is nearly zero resistance between the two! I am no antenna expert, but this doesn&#x27;t seem right</li><li>The router doesn&#x27;t put out enough power for the Yagi. This is a low-end router after all</li></ol><h2 id="whats-next">What&#x27;s Next?</h2><p>This was quite the bummer. I have hit a wall, trying to make the yagi work. My options are:</p><ol><li>try different yagi/router combinations</li><li>try a parabolic antenna</li></ol><p>More importantly, this failed experiment exposed the massive flaw in my plans - I have
+very little theoretical understanding of how antennas and waveforms work. I could use some help
+from someone who does. Before I burn through more of my cash on failed experiments,
+I should consult with someone who has experience building long range wifi.
+Until then, I have no option but to put this project on hold.</p><style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+  }
+  
+  .grvsc-code {
+    display: inline-block;
+    min-width: 100%;
+  }
+  
+  .grvsc-line {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-line-highlighted {
+    background-color: var(--grvsc-line-highlighted-background-color, transparent);
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, transparent);
+  }
+  
+</style></div><div class="article__TableOfContents-sc-1a9ma3j-3 ginXdY"></div></article></main><footer class="Footer__Wrapper-sc-8vmaik-0 ihJeNY"><p class="license"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="Footer__LicenseLink-sc-8vmaik-1 bTmRDJ"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a><span>Except where otherwise noted, content on this site is licensed under<!-- --> <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span></p></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/projects/mobile-p2p-communicator-part-2";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-888e9819e65744ba9d6f.js"],"component---src-templates-article-js":["/component---src-templates-article-js-2c752f34bd83f235a1b0.js"],"component---src-templates-category-js":["/component---src-templates-category-js-01b402fa03c39c50d00a.js"],"component---src-pages-about-js":["/component---src-pages-about-js-278e53a7ea138ba1d5a1.js"],"component---src-pages-index-js":["/component---src-pages-index-js-06b3c8eadbbe6bfdefc2.js"]};/*]]>*/</script><script src="/webpack-runtime-fea58a8241ba96d79d16.js" async=""></script><script src="/commons-24b929084ab5942b8a57.js" async=""></script><script src="/component---src-templates-article-js-2c752f34bd83f235a1b0.js" async=""></script><script src="/app-888e9819e65744ba9d6f.js" async=""></script></body></html>
