@@ -1,0 +1,201 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.19.45"/><title data-react-helmet="true">Building a Dual-Xeon Workstation</title><meta data-react-helmet="true" name="description" content="Build log of my dual-Xeon workstation, built almost entirely of used or refurbished parts"/><meta data-react-helmet="true" name="keywords" content="javascript, async, await, concurrency"/><meta data-react-helmet="true" name="author"/><style data-styled="" data-styled-version="5.0.1">.jumjqK{margin:2em 0;}
+.jumjqK .gatsby-resp-image-wrapper{background-color:#fff;border:solid 1px #e3e3e4;border-radius:2px;box-shadow:1px 1px 4px #e9edee;cursor:pointer;padding:4px;border-bottom:none;border-radius:2px 2px 0 0;}
+.jumjqK a{position:relative;}
+.jumjqK p{margin:0 !important;padding:0 !important;}
+.jumjqK img{background-color:#fff;box-sizing:border-box;}
+.jumjqK figcaption{background-color:#fff;border:solid 1px #e9edee;border-radius:0 0 2px 2px;border-top:none;box-shadow:1px 3px 4px #e9edee;box-sizing:border-box;color:#606061;font-size:0.85em;margin:0 auto;max-width:600px;padding:22px 10px 20px;position:relative;top:-2px;width:100%;z-index:2;}
+data-styled.g1[id="Figure__Fig-sc-71uj2s-0"]{content:"jumjqK,"}
+.gYJlEe{background-color:#606060;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-image:url(/static/d72594ef4f8d6b9bd1521993e60a1cac/Build-Complete-01.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;height:300px;left:0;position:fixed;right:0;top:70px;z-index:2;}
+@media all and (min-width:800px){.gYJlEe{top:0;}}
+data-styled.g2[id="ArticleHeader__Wrapper-sc-13d0y20-0"]{content:"gYJlEe,"}
+.jviBKF{color:#fafafa;font-size:32px;font-weight:400;max-width:50rem;position:relative;text-shadow:2px 2px 6px #000;width:90vw;z-index:2;}
+@media all and (min-width:800px){.jviBKF{font-size:48px;margin-left:60px;padding:0 1rem;}}
+data-styled.g3[id="ArticleHeader__Title-sc-13d0y20-1"]{content:"jviBKF,"}
+.jXknIo{background:#404041 url("/images/Pattern1.png") repeat;bottom:0;left:0;opacity:0.5;position:absolute;right:0;top:0;z-index:1;}
+data-styled.g4[id="ArticleHeader__Overlay-sc-13d0y20-2"]{content:"jXknIo,"}
+.fyfowu{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+@media all and (min-width:800px){.fyfowu{display:block;margin:0 0 0 12px;position:absolute;top:20px;width:205px;}}
+@media all and (max-width:799px){.fyfowu svg{height:55px;}}
+.fyfowu path{fill:#8cc63e;}
+.fyfowu text{display:inline-block;fill:#e9edee;font-family:vezuslight,sans-serif,sans;font-size:2rem;}
+@media all and (min-width:800px){.fyfowu text{font-size:2.25rem;}}
+data-styled.g5[id="Navbar__Logo-djt26d-0"]{content:"fyfowu,"}
+.kPXToL{background:none;border:none;box-shadow:none;color:#cacaca;float:right;font-size:1.5rem;padding:0;-webkit-transform:translate(5px,70%);-ms-transform:translate(5px,70%);transform:translate(5px,70%);}
+@media all and (min-width:800px){.kPXToL{display:none;}}
+data-styled.g6[id="Navbar__BtnMenu-djt26d-1"]{content:"kPXToL,"}
+.fdRXRq{background-color:#404041;box-shadow:2px 0 4px #2f2f37;overflow:hidden;padding:0.5rem 1rem;position:fixed;-webkit-transition:width 0.2s ease 0s;transition:width 0.2s ease 0s;z-index:9;left:0;top:0;right:0;}
+@media all and (min-width:800px){.fdRXRq{bottom:0;box-shadow:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;left:0;padding:0;right:auto;top:0;width:60px;}.fdRXRq:hover{width:230px;-webkit-transition:width 0.3s;transition:width 0.3s;}.fdRXRq:hover a{color:#e9edee;-webkit-transition:color 0.3s;transition:color 0.3s;}}
+data-styled.g7[id="Navbar__Nav-djt26d-2"]{content:"fdRXRq,"}
+.goGzKx{list-style-type:none;margin:0 0 0 -0.5rem;padding:0;display:none;}
+@media all and (min-width:800px){.goGzKx{display:block;margin:50px 0;}}
+.goGzKx > li{border:1px solid transparent;}
+.goGzKx > li > a{color:#cacaca;display:block;line-height:4em;padding-left:0;-webkit-text-decoration:none;text-decoration:none;text-transform:uppercase;white-space:nowrap;}
+@media all and (min-width:800px){.goGzKx > li > a{padding-left:10px;}}
+.goGzKx > li > a > i{font-size:1.7em;vertical-align:middle;display:inline-block;width:50px;}
+.goGzKx > li a.active,.goGzKx > li a.active:hover{color:#8cc63e;}
+.goGzKx > li:hover{background-color:#404041;color:#cacaca;-webkit-transition:box-shadow 0.4s,background-color 0.4s;transition:box-shadow 0.4s,background-color 0.4s;}
+@media all and (min-width:800px){.goGzKx > li:hover{border-bottom:solid 1px #989ba4;border-top:solid 1px #989ba4;box-shadow:0 0 4px #606060;}}
+data-styled.g8[id="Navbar__Links-djt26d-3"]{content:"goGzKx,"}
+.ihJeNY{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#e9edee;box-shadow:0 4px 8px 0 rgba(0,0,0,0.2) inset;color:#989ba4;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding:40px 1rem;position:relative;z-index:10;}
+@media all and (min-width:800px){.ihJeNY{height:150px;}}
+.ihJeNY .license{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin:0 auto;padding:0;text-align:center;}
+@media all and (min-width:800px){.ihJeNY .license{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;font-size:0.85em;padding-left:60px;text-align:left;}}
+data-styled.g9[id="Footer__Wrapper-sc-8vmaik-0"]{content:"ihJeNY,"}
+.bTmRDJ{margin:0 auto 20px;}
+@media all and (min-width:800px){.bTmRDJ{margin:0 10px 0 0;}}
+.bTmRDJ img{border:none;display:block;}
+data-styled.g10[id="Footer__LicenseLink-sc-8vmaik-1"]{content:"bTmRDJ,"}
+.gZYBjr{min-height:100vh;min-height:calc(100vh - 150px);padding-left:60px;padding-bottom:2rem;}
+@media all and (max-width:799px){.gZYBjr{padding-top:70px;padding-top:calc(70px + 1rem);padding-left:0;}}
+data-styled.g11[id="Layout__Main-sc-1l6nbaj-0"]{content:"gZYBjr,"}
+.iCRdPF{background:#f2f2f2;padding:2rem 0 4rem;position:relative;z-index:5;margin-top:300px;}
+@media all and (min-width:800px){.iCRdPF{padding:4rem 1rem;}}
+.iCRdPF h2,.iCRdPF h3,.iCRdPF h4,.iCRdPF h5{margin:1.5em 0 0.5em;}
+.iCRdPF .image-center{display:block;margin:20px auto;}
+.iCRdPF ol{list-style:decimal;}
+.iCRdPF ul{list-style:square;}
+.iCRdPF ol,.iCRdPF ul{margin:10px 0;padding-left:2rem;}
+.iCRdPF p{margin:10px 0;}
+.iCRdPF strong{font-weight:700;}
+.iCRdPF em{font-style:italic;}
+.iCRdPF code{font-family:monospace;font-size:16px;}
+@media all and (min-width:800px){.iCRdPF code{font-size:14px;}}
+.iCRdPF blockquote{background-color:#fafafa;border-radius:2px;box-shadow:2px 0 16px -4px rgba(128,128,128,0.2);color:#606060;margin:40px 0;padding:40px 40px 40px 60px;position:relative;z-index:1;}
+.iCRdPF blockquote::before{background:#2aabe4;content:" ";display:block;left:10px;height:32px;-webkit-mask:url("/images/quote.svg");mask:url("/images/quote.svg");position:absolute;top:10px;-webkit-transform:scale(-1);-ms-transform:scale(-1);transform:scale(-1);width:32px;z-index:2;}
+.iCRdPF blockquote::after{background:#2aabe4;bottom:10px;content:" ";height:32px;-webkit-mask:url("/images/quote.svg");mask:url("/images/quote.svg");position:absolute;right:10px;width:32px;z-index:2;}
+.iCRdPF hr{border:none;background-color:#cacaca;height:1px;margin:1rem 0;}
+.iCRdPF table.table{border-collapse:collapse;font-size:0.9rem;width:100%;}
+.iCRdPF table.table th{font-weight:bold;padding:12px 10px;}
+.iCRdPF table.table td{padding:6px 10px;}
+.iCRdPF .table-bordered{border-radius:2px;box-shadow:1px 2px 16px -4px #cacaca;overflow:hidden;}
+.iCRdPF .table-striped th{background-color:#e9edee;text-align:left;}
+.iCRdPF .table-striped tbody tr:nth-child(odd) td{background-color:#fafafa;}
+.iCRdPF .table-hover tbody tr:hover td{background-color:#dff2fb;}
+.iCRdPF .text-center,.iCRdPF th.text-center{text-align:center;}
+.iCRdPF .text-right,.iCRdPF th.text-right{text-align:right;}
+data-styled.g12[id="article__Wrapper-sc-1a9ma3j-0"]{content:"iCRdPF,"}
+.bviVYe{color:#989ba4;margin-bottom:2rem;}
+@media all and (min-width:800px){.bviVYe{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:0.9rem;}}
+.bviVYe dl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-bottom:10px;text-transform:uppercase;}
+@media all and (max-width:799px){.bviVYe dl{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.bviVYe dl dt:nth-child(3n){-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;margin-top:20px;}}
+.bviVYe dt{font-weight:600;margin-right:5px;}
+.bviVYe dd{margin-right:1em;}
+data-styled.g13[id="article__Metadata-sc-1a9ma3j-1"]{content:"bviVYe,"}
+.hzTfpF{margin:0 auto;max-width:50rem;width:90vw;}
+data-styled.g14[id="article__Content-sc-1a9ma3j-2"]{content:"hzTfpF,"}
+@font-face{font-family:"vezuslight";src:url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.eot");src:url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.woff2") format("woff2"), url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.woff") format("woff"), url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.ttf") format("truetype");font-weight:normal;font-style:normal;}
+@font-face{font-family:"corbertregular";font-style:normal;font-weight:normal;src:url("/fonts/corbert/corbert_regular_regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/corbert/corbert_regular_regular-webfont.woff") format("woff"), url("/fonts/corbert/corbert_regular_regular-webfont.ttf") format("truetype"), url("/fonts/corbert/corbert_regular_regular-webfont.svg#corbertregular") format("svg");}
+@font-face{font-family:"Clear Sans Light";src:url("/fonts/clear-sans/ClearSans-Light.eot?12387945");src:url("/fonts/clear-sans/ClearSans-Light.eot?12387945#iefix") format("embedded-opentype"), url("/fonts/clear-sans/ClearSans-Light.woff?12387945") format("woff"), url("/fonts/clear-sans/ClearSans-Light.ttf?12387945") format("truetype"), url("/fonts/clear-sans/ClearSans-Light.svg?12387945#ClearSans-Light") format("svg");font-weight:normal;font-style:normal;}
+@font-face{font-family:"ddpicons";src:url("/fonts/ddpicons/ddpicons.eot?25466695");src:url("/fonts/ddpicons/ddpicons.eot?25466695#iefix") format("embedded-opentype"), url("/fonts/ddpicons/ddpicons.woff?25466695") format("woff"), url("/fonts/ddpicons/ddpicons.ttf?25466695") format("truetype"), url("/fonts/ddpicons/ddpicons.svg?25466695#ddpicons") format("svg");font-weight:normal;font-style:normal;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:"";content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+[class^="icon-"]:before,[class*=" icon-"]:before{font-family:"ddpicons";font-style:normal;font-weight:normal;speak:none;display:inline-block;-webkit-text-decoration:inherit;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;}
+.icon-users:before{content:"\e801";}
+.icon-mail:before{content:"\e802";}
+.icon-mail-filled:before{content:"\e803";}
+.icon-home:before{content:"\e805";}
+.icon-info-circled:before{content:"\e806";}
+.icon-angle-down:before{content:"\e807";}
+.icon-globe:before{content:"\e808";}
+.icon-book:before{content:"\e809";}
+.icon-search:before{content:"\e80b";}
+.icon-time:before{content:"\e80c";}
+.icon-user:before{content:"\e80d";}
+.icon-hamburger:before{content:"\e80e";}
+.icon-tags:before{content:"\e810";}
+.icon-angle-up:before{content:"\e811";}
+.icon-tag:before{content:"\e812";}
+.icon-cancel:before{content:"\e813";}
+.icon-ok:before{content:"\e814";}
+.icon-upload:before{content:"\e815";}
+.icon-folder:before{content:"\e816";}
+.icon-facebook:before{content:"\e817";}
+.icon-twitter:before{content:"\e818";}
+.icon-data-science:before{content:"\e81a";}
+.icon-rocket:before{content:"\e81b";}
+.icon-flask:before{content:"\e81c";}
+.icon-calendar:before{content:"\e81d";}
+*{box-sizing:border-box;}
+body{background-color:#f2f2f2;color:#404040;font-family:"Clear Sans Light",sans-serif,sans;font-weight:300;line-height:1.6;}
+h1,h2,h3,h4,h5{font-weight:600;font-family:"corbertregular",sans-serif,sans;line-height:1.25;}
+h1{font-size:28px;}
+h2{font-size:24px;}
+@media all and (min-width:800px){h2{font-size:28px;}}
+h3{font-size:28px;}
+@media all and (min-width:800px){h3{font-size:24px;}}
+h4{font-size:18px;}
+h5{font-size:16px;}
+a{color:#ee0072;}
+.btn{background-color:#2aabe4;border-radius:2px;box-shadow:1px 1px 2px rgba(0,0,0,0.2);color:#fff;display:inline-block;font-size:16px;font-weight:300;padding:0.75rem 1.25rem;-webkit-text-decoration:none;text-decoration:none;text-transform:uppercase;}
+@media all and (min-width:800px){.btn{font-size:14px;}}
+.btn:hover{background-color:#198ec2;-webkit-transition:background-color 0.5s;transition:background-color 0.5s;}
+a.btn,a.btn:link,a.btn:focus,a.btn:visited{color:#fff;}
+data-styled.g38[id="sc-global-dBFHXm1"]{content:"sc-global-dBFHXm1,"}
+</style><link rel="shortcut icon" type="image/png" href="/favicon.png"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="author" content="Subir Chowdhuri"/><link as="script" rel="preload" href="/app-888e9819e65744ba9d6f.js"/><link as="script" rel="preload" href="/component---src-templates-article-js-488f7986194bbeebc79c.js"/><link as="script" rel="preload" href="/commons-c0db332a365920807b64.js"/><link as="script" rel="preload" href="/webpack-runtime-05a213f5d83c0e025a31.js"/><link as="fetch" rel="preload" href="/page-data/projects/building-my-dual-cpu-workstation-used-parts/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><nav class="Navbar__Nav-djt26d-2 fdRXRq"><button class="Navbar__BtnMenu-djt26d-1 kPXToL icon icon-hamburger"></button><div class="Navbar__Logo-djt26d-0 fyfowu"><a href="/"><svg viewBox="0 0 304.7 81.162"><g transform="translate(-1.262,-973.124)"><path d="m50.916,1025.2c0-22.739,2.6003-49.859-36.076-50.076,0,0,30.668,1.1835,28.493,29.426,0,0,8.1146-3.4063-16.168-3.4063-23.42,0-23.903,0.8631-23.903,24.056,0,23.627,0.45143,24.056,23.29,24.056,24.572,0,24.363-0.7653,24.363-24.056z"></path><text y="1040.3662" x="70.750862">Desdevpro</text></g></svg></a></div><ul itemProp="breadcrumb" itemscope="" itemType="http://schema.org/BreadcrumbList" class="Navbar__Links-djt26d-3 goGzKx"><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a href="/"><i class="icon icon-home"></i><span itemProp="name">Home</span></a></li><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a itemProp="item" class="active" href="/projects"><i class="icon icon-flask"></i><span itemProp="name">Projects</span></a></li><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a itemProp="item" href="/blog"><i class="icon icon-book"></i><span itemProp="name">Articles</span></a></li><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a itemProp="item" href="/about"><i class="icon icon-info-circled"></i><span itemProp="name">About</span></a></li></ul></nav><main class="Layout__Main-sc-1l6nbaj-0 gZYBjr"><header class="ArticleHeader__Wrapper-sc-13d0y20-0 gYJlEe"><h1 class="ArticleHeader__Title-sc-13d0y20-1 jviBKF">Building a Dual-Xeon Workstation</h1><div class="ArticleHeader__Overlay-sc-13d0y20-2 jXknIo"></div></header><article class="article__Wrapper-sc-1a9ma3j-0 iCRdPF"><div class="article__Content-sc-1a9ma3j-2 hzTfpF"><section class="article__Metadata-sc-1a9ma3j-1 bviVYe"><dl><dt><i class="icon icon-calendar"></i>Published:</dt><dd>Dec 14, 2016</dd></dl><dl><dt><i class="icon icon-calendar"></i>Last updated:</dt><dd>Feb 05, 2018</dd></dl></section><p>I had been saving since forever to build the ultimate workstation! I have no interest in splurging on the latest and the greatest. Instead, I decided to pick used parts from a few generations ago which provide excellent value for money.</p><h2 id="what-this-build-is-not">What This Build is Not</h2><p>This is not a gaming build (that would be a story for another day!). If you are looking for a build log that ends with photos of a shiny case studded with RGB LEDs, this is where you must stop. This is supposed to be my primary workstation, which will spend its life tucked away in a corner, out of sight. Aesthetics is nowhere on my requirement list.</p><h2 id="what-do-i-need-from-my-workstation">What do I Need From my Workstation?</h2><p>My primary workflows are:</p><ul><li>3D modeling and animation using Blender and Houdini</li><li>Real-time 3D: Unreal Engine</li><li>Video crunching - ffmpeg, handbrake</li><li>Image processing</li><li>2+ VMs used for webdev and Android app dev</li></ul><p>I often switch between two or more running in parallel. And there is Google Chrome with 20+ tabs, hogging more RAM than everything else put together -.-</p><p>I narrowed down the essentials to a minimum of:</p><ul><li>32 GB RAM</li><li>8 CPU threads</li></ul><h2 id="picking-the-parts">Picking the Parts</h2><h4 id="processor">Processor</h4><p>I love Intel&#x27;s <a href="http://ark.intel.com/products/80806/Intel-Core-i7-4790-Processor-8M-Cache-up-to-4_00-GHz" target="_blank">i7 4790k</a> chip.
+It has some serious firepower with a 4.0 Ghz base clock, turbo boosting to 4.40 GHz! I started scouring the web for a good deal.</p><p>Side note about the pathetic state of computer hardware market here in India. First, the options are extremely limited :-/ Good luck finding any used parts. Next, the ridiculous import duties mean processors and graphics cards cost anywhere from 30% - 60% higher than the equivalent price in the US market.</p><p>I couldn&#x27;t find any used 4790k processor. The new one would set me back by INR 27000. Ouch!</p><p>Something caught my attention as I was researching processors. A slew of decommissioned Xeon processors seem to have landed on eBay! I found <strong>Xeon E5 2670</strong>
+chips selling for about INR 10000 - 14000 each! This was a game changer! Time to go back to the drawing board.
+The <a href="http://ark.intel.com/products/64595/Intel-Xeon-Processor-E5-2670-20M-Cache-2_60-GHz-8_00-GTs-Intel-QPI" target="_blank">Intel Xeon E5 2670</a> packs a punch!</p><ul><li>20 MB cache (woah!)</li><li>8 cores x 2 threads</li><li>Up to 384GB of RAM (ECC)</li><li>Quad-channel memory</li><li>Supports 2 processor configuration! Oh yeah, now we are talking!</li></ul><p>On the flip side:</p><ul><li>Only 2.60 GHz base clock (but boosts to 3.30 GHz turbo boost, which is impressive)</li><li>High TDP: 115W</li><li>Dated Sandy Bridge architecture</li></ul><blockquote><p>The options in India are extremely limited. Good luck finding any used parts. The ridiculous import duties mean processors and graphics cards cost anywhere from 30% - 60% higher than the equivalent price in the US market.</p></blockquote><p>The prospect of running 32 cores in a dual-CPU config won me over. The days of VMs freezing on me are gonna be a thing of the past! Intel Xeon E5 2670 it is. Two of &#x27;em!</p><h4 id="motherboard">Motherboard</h4><p>The choice of motherboard was a simple but expensive one. The only option available to me was the <a href="http://www.asrockrack.com/general/productdetail.asp?Model=EP2C602#Specifications" target="_blank">AsRock EP2C602</a>. It was gonna be <em>the</em> most expensive part of the build :-|</p><figure class="Figure__Fig-sc-71uj2s-0 jumjqK"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/13758cfa35076f450e83a372c3768a9d/47311/mobo.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:116.00000000000001%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="AsRock EP2C602" title="AsRock EP2C602" src="/static/13758cfa35076f450e83a372c3768a9d/b4294/mobo.jpg" srcSet="/static/13758cfa35076f450e83a372c3768a9d/75985/mobo.jpg 150w,/static/13758cfa35076f450e83a372c3768a9d/f93b5/mobo.jpg 300w,/static/13758cfa35076f450e83a372c3768a9d/b4294/mobo.jpg 600w,/static/13758cfa35076f450e83a372c3768a9d/8e1fc/mobo.jpg 900w,/static/13758cfa35076f450e83a372c3768a9d/47311/mobo.jpg 1080w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p><figcaption>AsRock EP2C602</figcaption></figure><h4 id="ram">RAM</h4><p>I was in luck! Stumbled upon decommissioned ECC memory at unbelievable prices! Got myself 8 sticks of 8GB DDR3 1333 ECC memory for a total of 64GB RAM! Bring it on Google Chrome, I dare ya!</p><h4 id="graphics-card">Graphics card</h4><p>Another awesome deal, thanks to eBay! A used GTX 960 2GB which barely had any signs of wear! Why only GTX 960? Well, I have no plans to game. Will probably use it for some Cycles rendering. Might rethink and upgrade in future. For now, this should do.</p><h4 id="storage">Storage</h4><p>I picked a used Intel 520 Series 180GB SSD off eBay for my boot drive. I should have an old HDD lying around which should come in useful.</p><h4 id="power-supply">Power Supply</h4><p>Ironically, this took me the most time to find. I wanted a modular supply with 2 CPU connectors. Those are rare to begin with. Couldn&#x27;t find any in a store (physical or online). Eventually, I grabbed a refurbished Corsair RM 1000x off Newegg.</p><h4 id="cpu-cooler">CPU Cooler</h4><p>I had always wanted one of the closed-loop CPU coolers. But I was at the fag end of my budget. Another example of the ridiculous hardware prices in India - the Corsair H100 costs about three times as much as the CoolerMaster Hyper 212X. Ended up settling for the Hyper 212X :-|</p><h4 id="case">Case</h4><p>Uh-oh! Big problem here. The EP2C602 is an e-ATX mobo. None - and I mean it - NONE of the stores had an e-ATX mobo. Also, the case had to be big enough for the Hyper 212X. There were only a few to be found online - at exorbitant prices. My budget was already stretched thin. I couldn&#x27;t afford spending more than my processor for a tin can :-/</p><p><strong>Alternatives:</strong></p><ul><li>Build my own eATX case (Aluminium? Wood?)</li><li>Mod an existing case</li></ul><p>The first option is far too much work. The second one seems plausible.</p><p>The eATX form factor has some matching screw-holes with an ATX mobo. Dimensions of a full-size ATX board are 12 x 9.6 in (305 × 244 mm). My eATX mobo is 12 x 13 in (305 x 330 mm). The extra 2.4 inches overlaps with the optical and hard drive cages in the case. What if I could somehow get rid of all those? Only one way to find out: get one and see if it works.</p><h2 id="open-air-build">Open-Air Build</h2><p>Once all the parts were procured I started putting them together for a test-build. Half way through the process I realised that I had no monitor! Dang! What a fail! Oh well, I do have a projector. That should do for now.</p><p>The LGA 2011 socket is easy to mount. The two retention latches lock down real hard!</p><p>The Hyper 212X heatsinks are gigantic and clumsy. In retrospect, this is only about an average cooler. With everything in place, I had to consult the mobo manual to find the right jumpers to short, and the system sprang to life.</p><h4 id="no-display">No Display!</h4><p>Every system builder&#x27;s worst nightmare - no display/POST. Dr.Debug gave some clues:
+It threw up Q-Code 64 (I looked it up - it means CPU DXE initialization). Well, one or both CPU&#x27;s had a problem. What could I have messed up?</p><h4 id="post">POST!</h4><ul><li>Swapped CPUs - no display</li><li>Removed CPU 2 - no display</li><li>Replaced CPU 1 with CPU 2 - Viola! POST! Woot!</li></ul><p><strong>Bad news:</strong> One of the CPUs was DOA</p><p><strong>Good news:</strong> Everything else works</p><p>Praying that the eBay seller replaces it or issues me a refund. The seller didn&#x27;t respond to any of my repeated complaints. So, I gave in and ordered another Xeon E5 2670 off Newegg. Well, now that everything is tested to be working, it is time for the final build.</p><blockquote><p>In retrospect, there were many potential points of failure - especially when almost everything in the build is used/refurbished. I think I got off easy.</p></blockquote><p><strong>Update 1 (Dec 23, 2016):</strong> I did hear back from the seller, who asked me to ship the dead processor back to him, following which, he would send me a replacement. I don&#x27;t have high hopes, though.</p><p><strong>Update 2 (Mar 29, 2017):</strong> As I suspected, the seller has just been trolling me. Three months later, I still have not received a replacement or refund</p><h2 id="the-build">The Build</h2><p>I picked up an <em>el cheapo</em>, no-name ATX case from a store and decided to get cracking with the limited set of tools and upper body strength I possess.</p><p>Oh! How I wish I was back in my Dad&#x27;s workshop. He is kinda the Chuck Norris of metal and wood working!</p><p>After a night of cracking rivets open, the hard drive cages were out of the case. Next step was to add some insulated pads for supporting the mobo in places where mounting holes were missing (I don&#x27;t have a drill machine - so I couldn&#x27;t add the appropriate mobo stand-offs). Silicone glue + tough rubber pads (scavenged from scrap) left to settle down overnight did the job.</p><figure class="Figure__Fig-sc-71uj2s-0 jumjqK"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/374ef19f6e94b283d233846eb512581e/8e1fc/chassis-01.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:74%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Modding the case" title="Modding the case" src="/static/374ef19f6e94b283d233846eb512581e/b4294/chassis-01.jpg" srcSet="/static/374ef19f6e94b283d233846eb512581e/75985/chassis-01.jpg 150w,/static/374ef19f6e94b283d233846eb512581e/f93b5/chassis-01.jpg 300w,/static/374ef19f6e94b283d233846eb512581e/b4294/chassis-01.jpg 600w,/static/374ef19f6e94b283d233846eb512581e/8e1fc/chassis-01.jpg 900w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p><figcaption>Modding the ATX case for the e-ATX motherboard</figcaption></figure><p>The mobo fit like a charm! The rubber pads provide supports in the right spots. Next in was the power supply. Wish the mobo power cable was longer. Corsair cheaped out on that one. The build quality of the case is not bad, for a dirt cheap box. It has a couple of front-panel USB 3.0 which I can&#x27;t use (this is fairly dated architecture and a server mobo, remember?). Also, no on-board audio on the server-class mobo. Will probably add a sound card later.</p><figure class="Figure__Fig-sc-71uj2s-0 jumjqK"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/8ac7906ff82fb13fe12dd79e1992b559/2a75a/assembly-01.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:125.33333333333334%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Making everything fit in the modded case&quot;" title="Making everything fit in the modded case&quot;" src="/static/8ac7906ff82fb13fe12dd79e1992b559/b4294/assembly-01.jpg" srcSet="/static/8ac7906ff82fb13fe12dd79e1992b559/75985/assembly-01.jpg 150w,/static/8ac7906ff82fb13fe12dd79e1992b559/f93b5/assembly-01.jpg 300w,/static/8ac7906ff82fb13fe12dd79e1992b559/b4294/assembly-01.jpg 600w,/static/8ac7906ff82fb13fe12dd79e1992b559/8e1fc/assembly-01.jpg 900w,/static/8ac7906ff82fb13fe12dd79e1992b559/2a75a/assembly-01.jpg 955w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p><figcaption>Making everything fit in the modded case</figcaption></figure><p>Meanwhile, I managed to buy a used <strong>Dell S2216H</strong> monitor which has built-in audio, Audio-In and Audio-Out. Just what I need! Don&#x27;t need an audio card anymore!</p><p>With the hard drive cages gone, some improvisation is in order for mounting the SSD (and an old 1TB hard drive I had lying around). Some clever use of zip ties and cable ties did it. Yeah, it won&#x27;t hold up against the case being tossed around. But this is just gonna sit in a corner, never to be moved. I think it will do just fine.</p><figure class="Figure__Fig-sc-71uj2s-0 jumjqK"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/d72594ef4f8d6b9bd1521993e60a1cac/b17f8/Build-Complete-01.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:74%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Dual Xeon Build Completed" title="Dual Xeon Build Completed" src="/static/d72594ef4f8d6b9bd1521993e60a1cac/b4294/Build-Complete-01.jpg" srcSet="/static/d72594ef4f8d6b9bd1521993e60a1cac/75985/Build-Complete-01.jpg 150w,/static/d72594ef4f8d6b9bd1521993e60a1cac/f93b5/Build-Complete-01.jpg 300w,/static/d72594ef4f8d6b9bd1521993e60a1cac/b4294/Build-Complete-01.jpg 600w,/static/d72594ef4f8d6b9bd1521993e60a1cac/8e1fc/Build-Complete-01.jpg 900w,/static/d72594ef4f8d6b9bd1521993e60a1cac/e5166/Build-Complete-01.jpg 1200w,/static/d72594ef4f8d6b9bd1521993e60a1cac/b17f8/Build-Complete-01.jpg 1600w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p><figcaption>Behold! The completed dual Xeon build</figcaption></figure><p>One of the first tasks for my new workstation was building Unreal Engine from source. Watching 32 threads piledrive through the source was oddly satisfying! The job was done in about 10 minutes.</p><figure class="Figure__Fig-sc-71uj2s-0 jumjqK"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/a4b853df887ce9b2109710abe5da4e62/29114/unreal_build.png" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:55.99999999999999%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Building Unreal Engine" title="Building Unreal Engine" src="/static/a4b853df887ce9b2109710abe5da4e62/0a47e/unreal_build.png" srcSet="/static/a4b853df887ce9b2109710abe5da4e62/8a4e8/unreal_build.png 150w,/static/a4b853df887ce9b2109710abe5da4e62/5a46d/unreal_build.png 300w,/static/a4b853df887ce9b2109710abe5da4e62/0a47e/unreal_build.png 600w,/static/a4b853df887ce9b2109710abe5da4e62/1cfc2/unreal_build.png 900w,/static/a4b853df887ce9b2109710abe5da4e62/c1b63/unreal_build.png 1200w,/static/a4b853df887ce9b2109710abe5da4e62/29114/unreal_build.png 1920w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p><figcaption>Building Unreal Engine 4.18 on Ubuntu 16.04</figcaption></figure><h2 id="parts-list">Parts List</h2><table class="table table-bordered table-hover table-striped"><thead><tr><th>Part</th><th class="text-center">Qty</th><th class="text-right">Price (INR)</th></tr></thead><tbody><tr><td>Intel Xeon E5 2670</td><td class="text-center">2</td><td class="text-right">21000</td></tr><tr><td>Asrock EP2C602</td><td class="text-center">1</td><td class="text-right">31000</td></tr><tr><td>Samsung 8GB DDR3 1333 ECC</td><td class="text-center">8</td><td class="text-right">14500</td></tr><tr><td>Intel Series 520 180GB SSD</td><td class="text-center">1</td><td class="text-right">3000</td></tr><tr><td>Zotac GTX 960 Amp 2GB</td><td class="text-center">1</td><td class="text-right">12300</td></tr><tr><td>Corsair RM 1000x</td><td class="text-center">1</td><td class="text-right">10800</td></tr><tr><td>CoolerMaster Hyper 212X</td><td class="text-center">2</td><td class="text-right">8000</td></tr><tr><td>Generic ATX Case</td><td class="text-center">1</td><td class="text-right">4000</td></tr><tr><td>Dell S2216H Monitor</td><td class="text-center">1</td><td class="text-right">7000</td></tr><tr><td><strong>Total</strong></td><td class="text-center"></td><td class="text-right">111600</td></tr></tbody></table><style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+  }
+  
+  .grvsc-code {
+    display: inline-block;
+    min-width: 100%;
+  }
+  
+  .grvsc-line {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-line-highlighted {
+    background-color: var(--grvsc-line-highlighted-background-color, transparent);
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, transparent);
+  }
+  
+</style></div><div class="article__TableOfContents-sc-1a9ma3j-3 ginXdY"></div></article></main><footer class="Footer__Wrapper-sc-8vmaik-0 ihJeNY"><p class="license"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="Footer__LicenseLink-sc-8vmaik-1 bTmRDJ"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a><span>Except where otherwise noted, content on this site is licensed under<!-- --> <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span></p></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/projects/building-my-dual-cpu-workstation-used-parts";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-888e9819e65744ba9d6f.js"],"component---src-templates-article-js":["/component---src-templates-article-js-488f7986194bbeebc79c.js"],"component---src-templates-category-js":["/component---src-templates-category-js-01b402fa03c39c50d00a.js"],"component---src-pages-about-js":["/component---src-pages-about-js-278e53a7ea138ba1d5a1.js"],"component---src-pages-index-js":["/component---src-pages-index-js-7319139df755e895d2e6.js"]};/*]]>*/</script><script src="/webpack-runtime-05a213f5d83c0e025a31.js" async=""></script><script src="/commons-c0db332a365920807b64.js" async=""></script><script src="/component---src-templates-article-js-488f7986194bbeebc79c.js" async=""></script><script src="/app-888e9819e65744ba9d6f.js" async=""></script></body></html>
