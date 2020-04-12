@@ -24,7 +24,7 @@ const articlesQuery = `
             category
             coverImage {
               childImageSharp {
-                sizes(maxWidth: 600) {
+                sizes(maxWidth: 600, quality: 80) {
                   src
                 }
               }

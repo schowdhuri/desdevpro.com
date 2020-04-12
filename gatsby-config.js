@@ -51,8 +51,7 @@ module.exports = {
             options: {
               maxWidth: 600,
               disableBgImage: true,
-              showCaptions: false,
-              quality: 80
+              showCaptions: false
             }
           },
           {

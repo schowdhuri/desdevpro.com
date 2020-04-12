@@ -190,7 +190,7 @@ export const pageQuery = graphql`
             category
             coverImage {
               childImageSharp {
-                resize(width: 300) {
+                resize(width: 300, quality: 95) {
                   src
                 }
               }
