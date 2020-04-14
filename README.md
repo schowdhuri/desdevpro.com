@@ -41,6 +41,12 @@ meta:
 
 ## Development
 
+### Install Custom Plugin(s)
+
+```sh
+yarn setup
+```
+
 ### Dev Server
 ```sh
 yarn start
