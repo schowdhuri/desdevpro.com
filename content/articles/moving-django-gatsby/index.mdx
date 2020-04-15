@@ -12,20 +12,20 @@ tags:
   - Webdev
 title: Moving From Django to Gatsby
 type: article
-updated: "2020-03-23"
+updated: "2020-04-15"
 ---
 
 You are now looking at the fourth iteration of this website. In its current avatar, this is a static site, powered by Gatsby. I take a trip down the memory lane, reflecting upon how the tech behind this website has evolved, driven by changing needs, over the past 16 years.
 
 Way back in 2004, I started a consulting business and hacked together a crude website to showcase my work and testimonials. Hand-coded HTML, a little CSS and a lot of tables later, my website was live at  __desdevpro.co.cc__, graciously hosted for free by FreeHostia. Those were simple times! My need for dynamic content grew. I wanted people to be able to send enquiries through the website. Adding PHP was a no-brainer. At the time, I had had my fair share of frustration with the Java stack. PHP felt like a breath of fresh air!
 
-## Quick Markup Language
+## Early SaaS Days
 
 A big chunk of my clients in the 2004-08 period were doctors, researchers and writers. They wanted to publish their work online _and_ also be able to make changes without reaching out to me for support. At the time, Wordpress was almost unheard of, in this part of the world. Platforms like Blogger/Blogspot/Google Pages were only so customizable. Enter Quick Template Library aka QML - a CMS built to fill the gap. The idea was similar to what Ghost does today - provide a super lightweight WYSIWYG editor for a templating language which compiles to plain ol' HTML. QML's templating language was inspired by BBCode. The USP was, being able to import Wordpad RTF files and convert them to QML templates. The QML engine was written entirely in PHP. To show what QML was capable of, I decided to eat my own dogfood and rewrote the public-facing website in QML.
 
 The Wordpress boom of 2006-2008 made QML obsolete real quick! I moved existing clients over to Wordpress. QML was sunset in late 2009.
 
-## Python/Django
+## Full-Blown CMS
 
 My next paid gig was building a project lifecycle management tool. By then (ca 2008), it was becoming increasingly clear that "web applications" were the future. Having battled the growing pains of maintaining a PHP codebase, I decided to go with Python for this project. Django took a while to grow on me. But once I figured it out, the pieces fell in place and everything started to make sense. With QML on its way out, I ported my website to Django in 2010.
 
@@ -43,7 +43,7 @@ I ended up building a full-fledged CMS in Django. It had everything I needed:
 I was quite happy with the result! Thanks to the stability and extensibility of Django, the CMS works well, to this day, with very little maintenance over the _past decade!_.
 
 
-## Going Static
+## It's Just a Blog
 
 Over the last couple of years, I haven't really needed a backend. All my projects which needed server-side code are hosted on separate DigitalOcean droplets. Moreover, my needs are far simpler now. I can totally do without WYSIWYG editing, instant publish and modifications. Must admit, I was just being too lazy to drop the backend. In my defense, it still works flawlessly! The final nail in the coffin was - being DDoSed several times over a two-month period. I had CloudFlare up. Or else, the damage could have been much worse.
 
@@ -55,20 +55,20 @@ I recently discovered [MDX](https://mdxjs.com/) and was totally hooked. Gatsby a
 
 ```
 /
-└── content
-       └── articles
-       │     ├── article-1
-       │     │   index.mdx
-       │     │   Cover.jpg
-       │     │
-       │     └── article-2
-       │             index.mdx
-       │             Cover.jpg
-       │             another-image.jpg
-       │
-       └── categories
-             ├─── blog.mdx
-             └─── projects.mdx
+└─ content
+   └─ articles
+   │  ├─ article-1
+   │  │  ├─ index.mdx
+   │  │  └─ Cover.jpg
+   │  │
+   │  └─ article-2
+   │     ├─ index.mdx
+   │     ├─ Cover.jpg
+   │     └─ image.jpg
+   │
+   └─ categories
+      ├─ blog.mdx
+      └─ projects.mdx
 ```
 
 Every article would live in a dedicated subfolder under `/content/articles`. Static assets would live alongside the MDX files, and copied over to the `public` folder at build time. An article's attributes are defined as Markdown frontmatter. Here is the schema (for now; subject to change):
@@ -81,7 +81,8 @@ path: article-slug # slug
 meta:
   author: Subir Chowdhuri
   description: meta description
-  summary: HTML description # HTML supported; used on the category landing page
+status: live
+summary: HTML description # HTML supported; used on the category landing page
 tags:
   - Hardware # The first tag is used on the landing page
   - Raspberry
