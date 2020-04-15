@@ -10,7 +10,7 @@ date: "2020-12-12" # ISO date
 meta:
   author: Subir Chowdhuri
   description: meta description
-status: live
+status: live # one of `live`, `draft`, `hidden`
 summary: HTML description # HTML supported; used on the category landing page
 path: article-slug # slug
 tags:
