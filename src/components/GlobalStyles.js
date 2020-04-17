@@ -174,6 +174,9 @@ const appCss = `
   * {
     box-sizing: border-box;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: ${colors.background};
     color: ${colors.text};
