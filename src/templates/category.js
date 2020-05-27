@@ -16,7 +16,7 @@ function CategoryIndex(props) {
   const mdx = props.data.mdx;
   const articles = props.pageContext.articles;
   const config = {
-    title: mdx.frontmatter.title,
+    title: `Desdevpro | ${mdx.frontmatter.title}`,
     meta: mdx.frontmatter.meta
   };
   return (
