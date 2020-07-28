@@ -47,6 +47,9 @@ module.exports = {
             resolve: require.resolve("./plugins/gatsby-remark-copy-svg")
           },
           {
+            resolve: require.resolve("./plugins/gatsby-remark-copy-image")
+          },
+          {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 600,

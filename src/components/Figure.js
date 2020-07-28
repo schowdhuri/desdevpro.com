@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { colors } from "../constants/theme";
 
 const Figure = props => {
-  const { svg, caption, children } = props;
-  return <Fig svg={svg} hasCaption={Boolean(caption)}>
+  const { svg, caption, children, width, unoptimized} = props;
+  return <Fig svg={svg} hasCaption={Boolean(caption)} width={width} unoptimized={unoptimized}>
     {children}
     {!caption || <figcaption>
       {caption}
@@ -37,6 +37,17 @@ const Fig = styled.figure`
   img {
     background-color: ${colors.cardBg};
     box-sizing: border-box;
+    ${props => props.unoptimized
+      ? `
+        border: solid 1px ${colors.gray[1]};
+        border-bottom: none;
+        left: 50%;
+        max-width: 100%;
+        padding: 4px;
+        position: relative;
+        transform: translateX(-50%);
+      `
+      : ""}
   }
   figcaption {
     background-color: ${colors.cardBg};
@@ -48,10 +59,10 @@ const Fig = styled.figure`
     color: #606061;
     font-size: 0.85em;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: ${props => props.width ? `${props.width+2}px` : '600px'};
     padding: 22px 10px 20px;
     position: relative;
-    top: -2px;
+    ${props => props.unoptimized ? "top: -8px;" : "top: -2px;"}
     width: 100%;
     z-index: 2;
   }

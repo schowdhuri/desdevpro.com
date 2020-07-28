@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-remark-copy-svg",
+  "name": "gatsby-remark-copy-image",
   "private": true,
-  "description": "Copies SVG files to the public folder",
+  "description": "Copies unoptimized jpg/png files to the public folder",
   "version": "1.0.0",
   "license": "MIT",
   "main": "index.js",
