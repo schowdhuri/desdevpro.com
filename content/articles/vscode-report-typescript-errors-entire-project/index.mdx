@@ -18,7 +18,7 @@ type: article
 updated: "2020-10-08"
 ---
 
-VSCode reports TypeScript errors found in the currently open files. In my opinion, this nearly defeats the purpose of using types in a large codebase. If I were to make a type change in one of my files, which breaks a different module, I want my IDE to flag the error. Intellisense and compile-time error-reporting is a bare minimum requirement of any IDE.
+VSCode reports TypeScript errors only from the currently open files. In my opinion, this nearly defeats the purpose of using types in a large codebase. If I were to make a type change in one of my files, which breaks a different module, I want my IDE to flag the error. Intellisense and compile-time error-reporting is a bare minimum requirement of any IDE.
 
 Why VSCode doesn't have this ability out of the box is truly baffling. A quick search reveals an [open issue on the VSCode repo](https://github.com/microsoft/vscode/issues/13953) which hasn't been resolved in over three years! There are some decent workarounds suggested in that thread. I managed to distill that information into a quick recipe.
 
