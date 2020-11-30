@@ -69,8 +69,9 @@ const fontFaces = `
          url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.woff2") format("woff2"),
          url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.woff") format("woff"),
          url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.ttf") format("truetype");
-    font-weight: normal;
+    font-display: swap;
     font-style: normal;
+    font-weight: normal;
   }
   @font-face {
     font-family: "corbertregular";
@@ -88,6 +89,7 @@ const fontFaces = `
          url("/fonts/clear-sans/ClearSans-Light.woff?12387945") format("woff"),
          url("/fonts/clear-sans/ClearSans-Light.ttf?12387945") format("truetype"),
          url("/fonts/clear-sans/ClearSans-Light.svg?12387945#ClearSans-Light") format("svg");
+    font-display: swap;
     font-weight: normal;
     font-style: normal;
   }
@@ -98,6 +100,7 @@ const fontFaces = `
          url("/fonts/ddpicons/ddpicons.woff?25466695") format("woff"),
          url("/fonts/ddpicons/ddpicons.ttf?25466695") format("truetype"),
          url("/fonts/ddpicons/ddpicons.svg?25466695#ddpicons") format("svg");
+    font-display: swap;
     font-weight: normal;
     font-style: normal;
   }

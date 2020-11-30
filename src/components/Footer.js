@@ -19,6 +19,8 @@ function Footer() {
           <img
             alt="Creative Commons License"
             src="https://i.creativecommons.org/l/by/4.0/88x31.png"
+            height="31"
+            width="88"
           />
         </LicenseLink>
         <span>

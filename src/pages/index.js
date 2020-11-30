@@ -100,6 +100,7 @@ const Feed = styled.ul`
   &.css-layout {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     ${Article} {
       margin: 10px;
     }
