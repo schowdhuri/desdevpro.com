@@ -15,7 +15,7 @@ tags:
   - vscode
 title: "VSCode & TypeScript: Report Errors From the Entire Project"
 type: article
-updated: "2020-10-08"
+updated: "2020-10-12"
 ---
 
 VSCode reports TypeScript errors only from the currently open files. In my opinion, this nearly defeats the purpose of using types in a large codebase. If I were to make a type change in one of my files, which breaks a different module, I want my IDE to flag the error. Intellisense and compile-time error-reporting is a bare minimum requirement of any IDE.
@@ -165,13 +165,13 @@ You can retrieve the current limit for the number of watchers like so:
 cat /proc/sys/fs/inotify/max_user_watches
 ```
 
-To raise the limit edit `/etc/sysctl.conf` (you'd need root access) and set this the value of `fs.inotify.max_user_watches` to a higher number (max 524288):
+To raise the limit, edit `/etc/sysctl.conf` (you'd need root access) and bump up the value of `fs.inotify.max_user_watches` (max 524288):
 
 ```sh
 fs.inotify.max_user_watches=524288
 ```
 
-__Source:__ https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers
+[Read more about inotify watchers here](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers)
 
 
 Apply changes:
