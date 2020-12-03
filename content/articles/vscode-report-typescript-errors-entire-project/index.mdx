@@ -15,7 +15,7 @@ tags:
   - vscode
 title: "VSCode & TypeScript: Report Errors From the Entire Project"
 type: article
-updated: "2020-10-12"
+updated: "2020-10-13"
 ---
 
 VSCode reports TypeScript errors only from the currently open files. In my opinion, this nearly defeats the purpose of using types in a large codebase. If I were to make a type change in one of my files, which breaks a different module, I want my IDE to flag the error. Intellisense and compile-time error-reporting is a bare minimum requirement of any IDE.
@@ -33,7 +33,7 @@ Create a file called `.vscode/tasks.json` in your workspace:
   "tasks": [
     {
       "label": "tsc watch",
-      "type": "shell",
+      "type": "process",
       "command": "./node_modules/.bin/tsc",
       "isBackground": true,
       "args": ["--watch", "--noEmit", "--project", "path/to/tsconfig"],
