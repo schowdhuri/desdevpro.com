@@ -4,6 +4,9 @@
   "description": "desdevpro.com",
   "version": "4.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "setup": "cd plugins/gatsby-remark-copy-svg; yarn; cd -",
     "build": "gatsby clean && gatsby build",
