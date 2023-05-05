@@ -1,0 +1,239 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.19.45"/><title data-react-helmet="true">Moving From Django to Gatsby | Subir Chowdhuri | Desdevpro</title><meta data-react-helmet="true" name="description" content="This website is now powered by Gatsby!"/><meta data-react-helmet="true" name="author" content="Subir Chowdhuri"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><style data-styled="" data-styled-version="5.0.1">.gIMKEp{margin:2em 0;}
+.gIMKEp .gatsby-resp-image-wrapper{background-color:#fff;border:solid 1px #e3e3e4;border-radius:2px;box-shadow:1px 1px 4px #e9edee;cursor:pointer;padding:4px;border-bottom:none;border-radius:2px 2px 0 0;}
+.gIMKEp a{position:relative;}
+.gIMKEp p{margin:0 !important;padding:0 !important;}
+.gIMKEp img{background-color:#fff;box-sizing:border-box;}
+.gIMKEp figcaption{background-color:#fff;border:solid 1px #e9edee;border-radius:0 0 2px 2px;border-top:none;box-shadow:1px 3px 4px #e9edee;box-sizing:border-box;color:#606061;font-size:0.85em;margin:0 auto;max-width:600px;padding:22px 10px 20px;position:relative;top:-2px;width:100%;z-index:2;}
+data-styled.g1[id="Figure__Fig-sc-71uj2s-0"]{content:"gIMKEp,"}
+.bjYuBO{background-color:#606060;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-image:url(/static/28746728ad542049067424200f17dc13/php-to-django-togatsby.png);background-position:center;background-repeat:no-repeat;background-size:cover;height:300px;left:0;position:fixed;right:0;top:70px;z-index:2;}
+@media all and (min-width:800px){.bjYuBO{top:0;}}
+data-styled.g2[id="ArticleHeader__Wrapper-sc-13d0y20-0"]{content:"bjYuBO,"}
+.jviBKF{color:#fafafa;font-size:32px;font-weight:400;max-width:50rem;position:relative;text-shadow:2px 2px 6px #000;width:90vw;z-index:2;}
+@media all and (min-width:800px){.jviBKF{font-size:48px;margin-left:60px;padding:0 1rem;}}
+data-styled.g3[id="ArticleHeader__Title-sc-13d0y20-1"]{content:"jviBKF,"}
+.jXknIo{background:#404041 url("/images/Pattern1.png") repeat;bottom:0;left:0;opacity:0.5;position:absolute;right:0;top:0;z-index:1;}
+data-styled.g4[id="ArticleHeader__Overlay-sc-13d0y20-2"]{content:"jXknIo,"}
+.fyfowu{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+@media all and (min-width:800px){.fyfowu{display:block;margin:0 0 0 12px;position:absolute;top:20px;width:205px;}}
+@media all and (max-width:799px){.fyfowu svg{height:55px;}}
+.fyfowu path{fill:#8cc63e;}
+.fyfowu text{display:inline-block;fill:#e9edee;font-family:vezuslight,sans-serif,sans;font-size:2rem;}
+@media all and (min-width:800px){.fyfowu text{font-size:2.25rem;}}
+data-styled.g5[id="Navbar__Logo-djt26d-0"]{content:"fyfowu,"}
+.kPXToL{background:none;border:none;box-shadow:none;color:#cacaca;float:right;font-size:1.5rem;padding:0;-webkit-transform:translate(5px,70%);-ms-transform:translate(5px,70%);transform:translate(5px,70%);}
+@media all and (min-width:800px){.kPXToL{display:none;}}
+data-styled.g6[id="Navbar__BtnMenu-djt26d-1"]{content:"kPXToL,"}
+.fdRXRq{background-color:#404041;box-shadow:2px 0 4px #2f2f37;overflow:hidden;padding:0.5rem 1rem;position:fixed;-webkit-transition:width 0.2s ease 0s;transition:width 0.2s ease 0s;z-index:9;left:0;top:0;right:0;}
+@media all and (min-width:800px){.fdRXRq{bottom:0;box-shadow:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;left:0;padding:0;right:auto;top:0;width:60px;}.fdRXRq:hover{width:230px;-webkit-transition:width 0.3s;transition:width 0.3s;}.fdRXRq:hover a{color:#e9edee;-webkit-transition:color 0.3s;transition:color 0.3s;}}
+data-styled.g7[id="Navbar__Nav-djt26d-2"]{content:"fdRXRq,"}
+.goGzKx{list-style-type:none;margin:0 0 0 -0.5rem;padding:0;display:none;}
+@media all and (min-width:800px){.goGzKx{display:block;margin:50px 0;}}
+.goGzKx > li{border:1px solid transparent;}
+.goGzKx > li > a{color:#cacaca;display:block;line-height:4em;padding-left:0;-webkit-text-decoration:none;text-decoration:none;text-transform:uppercase;white-space:nowrap;}
+@media all and (min-width:800px){.goGzKx > li > a{padding-left:10px;}}
+.goGzKx > li > a > i{font-size:1.7em;vertical-align:middle;display:inline-block;width:50px;}
+.goGzKx > li a.active,.goGzKx > li a.active:hover{color:#8cc63e;}
+.goGzKx > li:hover{background-color:#404041;color:#cacaca;-webkit-transition:box-shadow 0.4s,background-color 0.4s;transition:box-shadow 0.4s,background-color 0.4s;}
+@media all and (min-width:800px){.goGzKx > li:hover{border-bottom:solid 1px #989ba4;border-top:solid 1px #989ba4;box-shadow:0 0 4px #606060;}}
+data-styled.g8[id="Navbar__Links-djt26d-3"]{content:"goGzKx,"}
+.ihJeNY{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#e9edee;box-shadow:0 4px 8px 0 rgba(0,0,0,0.2) inset;color:#989ba4;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding:40px 1rem;position:relative;z-index:10;}
+@media all and (min-width:800px){.ihJeNY{height:150px;}}
+.ihJeNY .license{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin:0 auto;padding:0;text-align:center;}
+@media all and (min-width:800px){.ihJeNY .license{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;font-size:0.85em;padding-left:60px;text-align:left;}}
+data-styled.g9[id="Footer__Wrapper-sc-8vmaik-0"]{content:"ihJeNY,"}
+.bTmRDJ{margin:0 auto 20px;}
+@media all and (min-width:800px){.bTmRDJ{margin:0 10px 0 0;}}
+.bTmRDJ img{border:none;display:block;}
+data-styled.g10[id="Footer__LicenseLink-sc-8vmaik-1"]{content:"bTmRDJ,"}
+.gZYBjr{min-height:100vh;min-height:calc(100vh - 150px);padding-left:60px;padding-bottom:2rem;}
+@media all and (max-width:799px){.gZYBjr{padding-top:70px;padding-top:calc(70px + 1rem);padding-left:0;}}
+data-styled.g11[id="Layout__Main-sc-1l6nbaj-0"]{content:"gZYBjr,"}
+.iCRdPF{background:#f2f2f2;padding:2rem 0 4rem;position:relative;z-index:5;margin-top:300px;}
+@media all and (min-width:800px){.iCRdPF{padding:4rem 1rem;}}
+.iCRdPF h2,.iCRdPF h3,.iCRdPF h4,.iCRdPF h5{margin:1.5em 0 0.5em;}
+.iCRdPF .image-center{display:block;margin:20px auto;}
+.iCRdPF ol{list-style:decimal;}
+.iCRdPF ul{list-style:square;}
+.iCRdPF ol,.iCRdPF ul{margin:10px 0;padding-left:2rem;}
+.iCRdPF p{margin:10px 0;}
+.iCRdPF strong{font-weight:700;}
+.iCRdPF em{font-style:italic;}
+.iCRdPF code{font-family:monospace;font-size:16px;}
+@media all and (min-width:800px){.iCRdPF code{font-size:14px;}}
+.iCRdPF blockquote{background-color:#fafafa;border-radius:2px;box-shadow:2px 0 16px -4px rgba(128,128,128,0.2);color:#606060;margin:40px 0;padding:40px 40px 40px 60px;position:relative;z-index:1;}
+.iCRdPF blockquote::before{background:#2aabe4;content:" ";display:block;left:10px;height:32px;-webkit-mask:url("/images/quote.svg");mask:url("/images/quote.svg");position:absolute;top:10px;-webkit-transform:scale(-1);-ms-transform:scale(-1);transform:scale(-1);width:32px;z-index:2;}
+.iCRdPF blockquote::after{background:#2aabe4;bottom:10px;content:" ";height:32px;-webkit-mask:url("/images/quote.svg");mask:url("/images/quote.svg");position:absolute;right:10px;width:32px;z-index:2;}
+.iCRdPF hr{border:none;background-color:#cacaca;height:1px;margin:1rem 0;}
+.iCRdPF table.table{border-collapse:collapse;font-size:0.9rem;width:100%;}
+.iCRdPF table.table th{font-weight:bold;padding:12px 10px;}
+.iCRdPF table.table td{padding:6px 10px;}
+.iCRdPF .table-bordered{border-radius:2px;box-shadow:1px 2px 16px -4px #cacaca;overflow:hidden;}
+.iCRdPF .table-striped th{background-color:#e9edee;text-align:left;}
+.iCRdPF .table-striped tbody tr:nth-child(odd) td{background-color:#fafafa;}
+.iCRdPF .table-hover tbody tr:hover td{background-color:#dff2fb;}
+.iCRdPF .text-center,.iCRdPF th.text-center{text-align:center;}
+.iCRdPF .text-right,.iCRdPF th.text-right{text-align:right;}
+data-styled.g12[id="article__Wrapper-sc-1a9ma3j-0"]{content:"iCRdPF,"}
+.bviVYe{color:#989ba4;margin-bottom:2rem;}
+@media all and (min-width:800px){.bviVYe{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:0.9rem;}}
+.bviVYe dl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-bottom:10px;text-transform:uppercase;}
+@media all and (max-width:799px){.bviVYe dl{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.bviVYe dl dt:nth-child(3n){-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;margin-top:20px;}}
+.bviVYe dt{font-weight:600;margin-right:5px;}
+.bviVYe dd{margin-right:1em;}
+data-styled.g13[id="article__Metadata-sc-1a9ma3j-1"]{content:"bviVYe,"}
+.hzTfpF{margin:0 auto;max-width:50rem;width:90vw;}
+data-styled.g14[id="article__Content-sc-1a9ma3j-2"]{content:"hzTfpF,"}
+@font-face{font-family:"vezuslight";src:url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.eot");src:url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.woff2") format("woff2"), url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.woff") format("woff"), url("/fonts/vezus/tour_de_force_-_vezus-light-webfont.ttf") format("truetype");font-display:swap;font-style:normal;font-weight:normal;}
+@font-face{font-family:"corbertregular";font-style:normal;font-weight:normal;src:url("/fonts/corbert/corbert_regular_regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/corbert/corbert_regular_regular-webfont.woff") format("woff"), url("/fonts/corbert/corbert_regular_regular-webfont.ttf") format("truetype"), url("/fonts/corbert/corbert_regular_regular-webfont.svg#corbertregular") format("svg");}
+@font-face{font-family:"Clear Sans Light";src:url("/fonts/clear-sans/ClearSans-Light.eot?12387945");src:url("/fonts/clear-sans/ClearSans-Light.eot?12387945#iefix") format("embedded-opentype"), url("/fonts/clear-sans/ClearSans-Light.woff?12387945") format("woff"), url("/fonts/clear-sans/ClearSans-Light.ttf?12387945") format("truetype"), url("/fonts/clear-sans/ClearSans-Light.svg?12387945#ClearSans-Light") format("svg");font-display:swap;font-weight:normal;font-style:normal;}
+@font-face{font-family:"ddpicons";src:url("/fonts/ddpicons/ddpicons.eot?25466695");src:url("/fonts/ddpicons/ddpicons.eot?25466695#iefix") format("embedded-opentype"), url("/fonts/ddpicons/ddpicons.woff?25466695") format("woff"), url("/fonts/ddpicons/ddpicons.ttf?25466695") format("truetype"), url("/fonts/ddpicons/ddpicons.svg?25466695#ddpicons") format("svg");font-display:swap;font-weight:normal;font-style:normal;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:"";content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+[class^="icon-"]:before,[class*=" icon-"]:before{font-family:"ddpicons";font-style:normal;font-weight:normal;speak:none;display:inline-block;-webkit-text-decoration:inherit;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;}
+.icon-users:before{content:"\e801";}
+.icon-mail:before{content:"\e802";}
+.icon-mail-filled:before{content:"\e803";}
+.icon-home:before{content:"\e805";}
+.icon-info-circled:before{content:"\e806";}
+.icon-angle-down:before{content:"\e807";}
+.icon-globe:before{content:"\e808";}
+.icon-book:before{content:"\e809";}
+.icon-search:before{content:"\e80b";}
+.icon-time:before{content:"\e80c";}
+.icon-user:before{content:"\e80d";}
+.icon-hamburger:before{content:"\e80e";}
+.icon-tags:before{content:"\e810";}
+.icon-angle-up:before{content:"\e811";}
+.icon-tag:before{content:"\e812";}
+.icon-cancel:before{content:"\e813";}
+.icon-ok:before{content:"\e814";}
+.icon-upload:before{content:"\e815";}
+.icon-folder:before{content:"\e816";}
+.icon-facebook:before{content:"\e817";}
+.icon-twitter:before{content:"\e818";}
+.icon-data-science:before{content:"\e81a";}
+.icon-rocket:before{content:"\e81b";}
+.icon-flask:before{content:"\e81c";}
+.icon-calendar:before{content:"\e81d";}
+*{box-sizing:border-box;}
+html{-webkit-scroll-behavior:smooth;-moz-scroll-behavior:smooth;-ms-scroll-behavior:smooth;scroll-behavior:smooth;}
+body{background-color:#f2f2f2;color:#404040;font-family:"Clear Sans Light",sans-serif,sans;font-weight:300;line-height:1.6;}
+h1,h2,h3,h4,h5{font-weight:600;font-family:"corbertregular",sans-serif,sans;line-height:1.25;}
+h1{font-size:28px;}
+h2{font-size:24px;}
+@media all and (min-width:800px){h2{font-size:28px;}}
+h3{font-size:28px;}
+@media all and (min-width:800px){h3{font-size:24px;}}
+h4{font-size:18px;}
+h5{font-size:16px;}
+a{color:#ee0072;}
+.btn{background-color:#2aabe4;border-radius:2px;box-shadow:1px 1px 2px rgba(0,0,0,0.2);color:#fff;display:inline-block;font-size:16px;font-weight:300;padding:0.75rem 1.25rem;-webkit-text-decoration:none;text-decoration:none;text-transform:uppercase;}
+@media all and (min-width:800px){.btn{font-size:14px;}}
+.btn:hover{background-color:#198ec2;-webkit-transition:background-color 0.5s;transition:background-color 0.5s;}
+a.btn,a.btn:link,a.btn:focus,a.btn:visited{color:#fff;}
+data-styled.g38[id="sc-global-jXgTCu1"]{content:"sc-global-jXgTCu1,"}
+</style><link rel="shortcut icon" type="image/png" href="/favicon.png"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="author" content="Subir Chowdhuri"/><link as="script" rel="preload" href="/app-91ace5ee929837ad1079.js"/><link as="script" rel="preload" href="/component---src-templates-article-js-456bddb3a2647bdd8361.js"/><link as="script" rel="preload" href="/commons-da55af2ad972f5fa6ddb.js"/><link as="script" rel="preload" href="/webpack-runtime-a0e3d07efb2235235945.js"/><link as="fetch" rel="preload" href="/page-data/blog/moving-django-gatsby/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><nav class="Navbar__Nav-djt26d-2 fdRXRq"><button class="Navbar__BtnMenu-djt26d-1 kPXToL icon icon-hamburger"></button><div class="Navbar__Logo-djt26d-0 fyfowu"><a href="/"><svg viewBox="0 0 304.7 81.162"><g transform="translate(-1.262,-973.124)"><path d="m50.916,1025.2c0-22.739,2.6003-49.859-36.076-50.076,0,0,30.668,1.1835,28.493,29.426,0,0,8.1146-3.4063-16.168-3.4063-23.42,0-23.903,0.8631-23.903,24.056,0,23.627,0.45143,24.056,23.29,24.056,24.572,0,24.363-0.7653,24.363-24.056z"></path><text y="1040.3662" x="70.750862">Desdevpro</text></g></svg></a></div><ul itemProp="breadcrumb" itemscope="" itemType="http://schema.org/BreadcrumbList" class="Navbar__Links-djt26d-3 goGzKx"><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a href="/"><i class="icon icon-home"></i><span itemProp="name">Home</span></a></li><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a itemProp="item" href="/projects"><i class="icon icon-flask"></i><span itemProp="name">Projects</span></a></li><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a itemProp="item" class="active" href="/blog"><i class="icon icon-book"></i><span itemProp="name">Articles</span></a></li><li itemProp="itemListElement" itemscope="" itemType="http://schema.org/ListItem"><a itemProp="item" href="/about"><i class="icon icon-info-circled"></i><span itemProp="name">About</span></a></li></ul></nav><main class="Layout__Main-sc-1l6nbaj-0 gZYBjr"><header class="ArticleHeader__Wrapper-sc-13d0y20-0 bjYuBO"><h1 class="ArticleHeader__Title-sc-13d0y20-1 jviBKF">Moving From Django to Gatsby</h1><div class="ArticleHeader__Overlay-sc-13d0y20-2 jXknIo"></div></header><article class="article__Wrapper-sc-1a9ma3j-0 iCRdPF"><div class="article__Content-sc-1a9ma3j-2 hzTfpF"><section class="article__Metadata-sc-1a9ma3j-1 bviVYe"><dl><dt><i class="icon icon-calendar"></i>Published:</dt><dd>Mar 21, 2020</dd></dl><dl><dt><i class="icon icon-calendar"></i>Last updated:</dt><dd>Apr 15, 2020</dd></dl></section><p>You are now looking at the fourth iteration of this website. In its current avatar, this is a static site, powered by Gatsby. I take a trip down the memory lane, reflecting upon how the tech behind this website has evolved, driven by changing needs, over the past 16 years.</p><p>Way back in 2004, I started a consulting business and hacked together a crude website to showcase my work and testimonials. Hand-coded HTML, a little CSS and a lot of tables later, my website was live at  <strong>desdevpro.co.cc</strong>, graciously hosted for free by FreeHostia. Those were simple times! My need for dynamic content grew. I wanted people to be able to send enquiries through the website. Adding PHP was a no-brainer. At the time, I had had my fair share of frustration with the Java stack. PHP felt like a breath of fresh air!</p><h2 id="early-saas-days">Early SaaS Days</h2><p>A big chunk of my clients in the 2004-08 period were doctors, researchers and writers. They wanted to publish their work online <em>and</em> also be able to make changes without reaching out to me for support. At the time, Wordpress was almost unheard of, in this part of the world. Platforms like Blogger/Blogspot/Google Pages were only so customizable. Enter Quick Template Library aka QML - a CMS built to fill the gap. The idea was similar to what Ghost does today - provide a super lightweight WYSIWYG editor for a templating language which compiles to plain ol&#x27; HTML. QML&#x27;s templating language was inspired by BBCode. The USP was, being able to import Wordpad RTF files and convert them to QML templates. The QML engine was written entirely in PHP. To show what QML was capable of, I decided to eat my own dogfood and rewrote the public-facing website in QML.</p><p>The Wordpress boom of 2006-2008 made QML obsolete real quick! I moved existing clients over to Wordpress. QML was sunset in late 2009.</p><h2 id="full-blown-cms">Full-Blown CMS</h2><p>My next paid gig was building a project lifecycle management tool. By then (ca 2008), it was becoming increasingly clear that &quot;web applications&quot; were the future. Having battled the growing pains of maintaining a PHP codebase, I decided to go with Python for this project. Django took a while to grow on me. But once I figured it out, the pieces fell in place and everything started to make sense. With QML on its way out, I ported my website to Django in 2010.</p><p>Why have a dynamic website at all? Well, there still was the client-facing SaaS portal behind the scenes, which used PHP. I was terribly strapped for cash, and couldn&#x27;t afford more servers. I decided to slap on a public frontend on top of the same webapp. Also, I wanted to able to add or modify content and watch it go live instantly.</p><p>I ended up building a full-fledged CMS in Django. It had everything I needed:</p><ul><li>WYSISWG content editing</li><li>support for Markdown and Jade (now Pug) templates</li><li>allow guest authors to write content</li><li>image uploads, optimization</li><li>tags, re-indexing</li><li>draft and preview modes</li></ul><p>I was quite happy with the result! Thanks to the stability and extensibility of Django, the CMS works well, to this day, with very little maintenance over the <em>past decade!</em>.</p><h2 id="its-just-a-blog">It&#x27;s Just a Blog</h2><p>Over the last couple of years, I haven&#x27;t really needed a backend. All my projects which needed server-side code are hosted on separate DigitalOcean droplets. Moreover, my needs are far simpler now. I can totally do without WYSIWYG editing, instant publish and modifications. Must admit, I was just being too lazy to drop the backend. In my defense, it still works flawlessly! The final nail in the coffin was - being DDoSed several times over a two-month period. I had CloudFlare up. Or else, the damage could have been much worse.</p><p>I explored several options for going static. Hugo stood out for its blinding fast builds. But the templating syntax gives me nightmares! I have been a JavaScript dev for a decade now. Ergo, I chose Gatsby over Jekyll. Also, I have worked with Gatsby before, and its plugin ecosystem is quite mature.</p><h2 id="building-with-gatsby">Building with Gatsby</h2><p>I recently discovered <a href="https://mdxjs.com/">MDX</a> and was totally hooked. Gatsby and MDX work extremely work together! The article data and related assets needed some organization. I came up with a custom directory structure for the content:</p><pre class="grvsc-container monokai" data-language="" data-index="0"><code class="grvsc-code"><span class="grvsc-line">/</span>
+<span class="grvsc-line">└─ content</span>
+<span class="grvsc-line">   └─ articles</span>
+<span class="grvsc-line">   │  ├─ article-1</span>
+<span class="grvsc-line">   │  │  ├─ index.mdx</span>
+<span class="grvsc-line">   │  │  └─ Cover.jpg</span>
+<span class="grvsc-line">   │  │</span>
+<span class="grvsc-line">   │  └─ article-2</span>
+<span class="grvsc-line">   │     ├─ index.mdx</span>
+<span class="grvsc-line">   │     ├─ Cover.jpg</span>
+<span class="grvsc-line">   │     └─ image.jpg</span>
+<span class="grvsc-line">   │</span>
+<span class="grvsc-line">   └─ categories</span>
+<span class="grvsc-line">      ├─ blog.mdx</span>
+<span class="grvsc-line">      └─ projects.mdx</span></code></pre><p>Every article would live in a dedicated subfolder under <code>/content/articles</code>. Static assets would live alongside the MDX files, and copied over to the <code>public</code> folder at build time. An article&#x27;s attributes are defined as Markdown frontmatter. Here is the schema (for now; subject to change):</p><pre class="grvsc-container monokai" data-language="yml" data-index="1"><code class="grvsc-code"><span class="grvsc-line"><span class="mtk7">category</span><span class="mtk1">: </span><span class="mtk6">blog</span><span class="mtk1"> </span><span class="mtk3"># must match one of the `catId` values (see Category)</span></span>
+<span class="grvsc-line"><span class="mtk7">date</span><span class="mtk1">: </span><span class="mtk6">&quot;2020-12-12&quot;</span><span class="mtk1"> </span><span class="mtk3"># ISO date</span></span>
+<span class="grvsc-line"><span class="mtk7">coverImage</span><span class="mtk1">: </span><span class="mtk6">Cover.jpg</span><span class="mtk1"> </span><span class="mtk3"># Optional</span></span>
+<span class="grvsc-line"><span class="mtk7">path</span><span class="mtk1">: </span><span class="mtk6">article-slug</span><span class="mtk1"> </span><span class="mtk3"># slug</span></span>
+<span class="grvsc-line"><span class="mtk7">meta</span><span class="mtk1">:</span></span>
+<span class="grvsc-line"><span class="mtk1">  </span><span class="mtk7">author</span><span class="mtk1">: </span><span class="mtk6">Subir Chowdhuri</span></span>
+<span class="grvsc-line"><span class="mtk1">  </span><span class="mtk7">description</span><span class="mtk1">: </span><span class="mtk6">meta description</span></span>
+<span class="grvsc-line"><span class="mtk7">status</span><span class="mtk1">: </span><span class="mtk6">live</span></span>
+<span class="grvsc-line"><span class="mtk7">summary</span><span class="mtk1">: </span><span class="mtk6">HTML description</span><span class="mtk1"> </span><span class="mtk3"># HTML supported; used on the category landing page</span></span>
+<span class="grvsc-line"><span class="mtk7">tags</span><span class="mtk1">:</span></span>
+<span class="grvsc-line"><span class="mtk1">  - </span><span class="mtk6">Hardware</span><span class="mtk1"> </span><span class="mtk3"># The first tag is used on the landing page</span></span>
+<span class="grvsc-line"><span class="mtk1">  - </span><span class="mtk6">Raspberry</span></span>
+<span class="grvsc-line"><span class="mtk7">title</span><span class="mtk1">: </span><span class="mtk6">Title of the post</span></span>
+<span class="grvsc-line"><span class="mtk7">type</span><span class="mtk1">: </span><span class="mtk6">article</span><span class="mtk1"> </span><span class="mtk3"># must be set to `article`</span></span>
+<span class="grvsc-line"><span class="mtk7">updated</span><span class="mtk1">: </span><span class="mtk6">&quot;2014-12-12&quot;</span><span class="mtk1"> </span><span class="mtk3"># required; set to the creation date</span></span></code></pre><p>The &#x27;categories&#x27; are sections of the blog. They would be defined by respective MDX files inside <code>/content/categories</code>. The frontmatter is of the form:</p><pre class="grvsc-container monokai" data-language="yml" data-index="2"><code class="grvsc-code"><span class="grvsc-line"><span class="mtk7">catId</span><span class="mtk1">: </span><span class="mtk6">blog</span></span>
+<span class="grvsc-line"><span class="mtk7">title</span><span class="mtk1">: </span><span class="mtk6">Articles</span></span>
+<span class="grvsc-line"><span class="mtk7">path</span><span class="mtk1">: </span><span class="mtk6">blog</span></span>
+<span class="grvsc-line"><span class="mtk7">type</span><span class="mtk1">: </span><span class="mtk6">category</span><span class="mtk1"> </span><span class="mtk3"># must be set to `category`</span></span>
+<span class="grvsc-line"><span class="mtk7">meta</span><span class="mtk1">:</span></span>
+<span class="grvsc-line"><span class="mtk1">  </span><span class="mtk7">description</span><span class="mtk1">: </span><span class="mtk6">Blog home</span><span class="mtk1"> </span><span class="mtk3"># plaintext</span></span>
+<span class="grvsc-line"><span class="mtk1">  </span><span class="mtk7">keywords</span><span class="mtk1">: </span><span class="mtk6">projects, desdevpro</span></span></code></pre><br/><p><strong>Note:</strong> I expect the frontmatter schema to evolve over time. Check out the <a href="https://github.com/schowdhuri/desdevpro.com/">source</a> for the current state of affairs.</p><h3 id="handling-images">Handling Images</h3><p>Gatsby&#x27;s plugins do most of the work for me. With very little config, the images are processed into variants of different sizes:</p><ul><li><code>gatsby-plugin-sharp</code></li><li><code>gatsby-remark-copy-images</code></li><li><code>gatsby-remark-images</code></li><li><code>gatsby-transformer-sharp</code>.</li></ul><p>There&#x27;s one catch, though. Remark Images doesn&#x27;t work on SVGs. I love SVGs! I <a href="https://github.com/schowdhuri/desdevpro.com/tree/master/plugins/gatsby-remark-copy-svg">rolled my own tiny plugin</a> to copy SVGs from the article subfolders into <code>/public</code>.</p><p>With everything in place, I content from the old CMS to the new site. It helped that it was markdown to begin with. I dropped guest posts, low quality posts and content older than six years.</p><h2 id="hosting">Hosting</h2><p>This is the easy part. As a static site, desdevpro.com can now be served off a CDN! Since, the source lives on Github, I decided to leverage Github Pages. Considering a push-to-deploy workflow using Github Actions. The results were amazing! Lighthouse scores breached 95. But there was room for improvement. Github Pages doesn&#x27;t have a way to customize cache headers. Lighthouse complained about the cache TTL being too low. Enter Cloudflare. With Cloudflare in front of my gh-pages endpoint, cache works like a charm. I got near-perfect lighthouse scores. Cloudflare also took care of SSL.</p><figure class="Figure__Fig-sc-71uj2s-0 gIMKEp"><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:600px">
+      <a class="gatsby-resp-image-link" href="/static/3f3fd566bcee060a8a03b2605725a5e9/4f216/lighthouse.jpg" style="display:block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom:33.33333333333333%;position:relative;bottom:0;left:0;display:block"></span>
+  <img class="gatsby-resp-image-image lazyload" alt="Lighthouse Scores" title="Lighthouse Scores" data-src="/static/3f3fd566bcee060a8a03b2605725a5e9/b4294/lighthouse.jpg" data-srcset="/static/3f3fd566bcee060a8a03b2605725a5e9/75985/lighthouse.jpg 150w,
+/static/3f3fd566bcee060a8a03b2605725a5e9/f93b5/lighthouse.jpg 300w,
+/static/3f3fd566bcee060a8a03b2605725a5e9/b4294/lighthouse.jpg 600w,
+/static/3f3fd566bcee060a8a03b2605725a5e9/4f216/lighthouse.jpg 839w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy"/>
+  </a>
+    </span></p><figcaption>Lighthouse Scores: Desktop (left) and Mobile</figcaption></figure><h2 id="loose-ends">Loose Ends</h2><p>There are some features from my Django CMS which the current setup doesn&#x27;t. I am not entirely certain if I really need a WYSIWYG content editor. If I do, I might integrate a headless CMS as a data source. NetlifyCMS, or even Wordpress come to mind. Until then, it is a wrap!</p><style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+  }
+  
+  .grvsc-code {
+    display: inline-block;
+    min-width: 100%;
+  }
+  
+  .grvsc-line {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-line-highlighted {
+    background-color: var(--grvsc-line-highlighted-background-color, transparent);
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, transparent);
+  }
+  
+  .monokai {
+    background-color: #272822;
+    color: #f8f8f2;
+  }
+  .monokai .mtk7 { color: #F92672; }
+  .monokai .mtk1 { color: #F8F8F2; }
+  .monokai .mtk6 { color: #E6DB74; }
+  .monokai .mtk3 { color: #75715E; }
+</style></div><div class="article__TableOfContents-sc-1a9ma3j-3 ginXdY"></div></article></main><footer class="Footer__Wrapper-sc-8vmaik-0 ihJeNY"><p class="license"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="Footer__LicenseLink-sc-8vmaik-1 bTmRDJ"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" height="31" width="88"/></a><span>Except where otherwise noted, content on this site is licensed under<!-- --> <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span></p></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-57423728-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/moving-django-gatsby";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-91ace5ee929837ad1079.js"],"component---src-templates-article-js":["/component---src-templates-article-js-456bddb3a2647bdd8361.js"],"component---src-templates-category-js":["/component---src-templates-category-js-388fd346a7b3e1f4794d.js"],"component---src-pages-about-js":["/component---src-pages-about-js-4162735b9841f818f5dd.js"],"component---src-pages-index-js":["/component---src-pages-index-js-a2cc24dbc434f736907d.js"]};/*]]>*/</script><script src="/webpack-runtime-a0e3d07efb2235235945.js" async=""></script><script src="/commons-da55af2ad972f5fa6ddb.js" async=""></script><script src="/component---src-templates-article-js-456bddb3a2647bdd8361.js" async=""></script><script src="/app-91ace5ee929837ad1079.js" async=""></script></body></html>
