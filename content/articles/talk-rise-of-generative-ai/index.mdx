@@ -74,12 +74,14 @@ If you take a step back and go over that timeline again you'll see that there ar
 
 - Utilize "self-attention mechanisms" to process and generate sequences of data
 - Highly effective in capturing long-range dependencies and context.
-- Transformers were originally built for for NLP, computer vision, graph-structured data, etc
+- Transformers were originally built for for NLP, but they have are also used for computer vision, graph-structured data, etc
 
 ### Large Language Model
 
 - Subset of transformer models that are trained on vast amounts of text data for NLP tasks
 - These models learn to generate text by predicting the next word in a sequence, given the context of the preceding words.
+
+Further Reading: [How GPTs Work](https://confusedbit.dev/posts/how_does_gpt_work/)
 
 ### Diffusion Model
 
@@ -195,11 +197,60 @@ Transfer learning is a technique where a pre-trained model, often trained on a l
 
 ### ChatGPT
 
-### LLAMA and Alpaca
+Needs no introduction! Here are some interesting prompts to try:
+
+1. Generate fully functional user interfaces using HTML and CSS
+```
+create a sign in form using html and tailwind css. it should accept an email and password. give me only the code in a code block. do not explain your response
+```
+
+2. Get book, movie or song recommendations
+```
+suggest two books that are similar to the book "the lord of the rings" by j.r.r. tolkien. give me only the titles of the books. do not explain your response
+
+i want to watch a movie. suggest 4 movies of the sci-fi genre. the movie runtime should be less than 150min. give me only the title of the movie. do not explain your response
+
+i want to listen to some music. suggest 4 songs of the progressive trance genre. the song runtime should be less than 5min. give me only the titles of the song. do not explain your response
+```
+
+3. Generate a list of ideas for a startup
+```
+i want to start a startup. suggest 4 startup ideas that require less than $1000 to start.
+```
+
+4. Make travel plans
+```
+my budget is $1500. i want to take a week long next month. i want to travel to a place with warm climate. i am interested in history, archaeology, nature hiking trails and food. above everything else, the destination should have a low crime rate. given these conditions please suggest 4 countries that i can travel to. for each country create an itinerary with my interests in mind.
+```
+
+
+#### Upcoming Features
+
+<Figure caption="Several mind-blowing ChatGPT features are being rolled out as we speak">
+
+![Several mind-blowing chatgpt features are being rolled out as we speak](./chatgpt-upcoming-features.jpg)
+
+</Figure>
+
 
 ### Hugging Face Chat
 
 https://huggingface.co/chat
+
+### LLAMA and Alpaca
+
+Models such as GPT-4, and HuggingChat have been fine-tuned using a method called Reinforcement Learning from Human Feedback (RLHF). Models like LLAMA and Alpaca are not. They aren't even trained to operate in the chatgpt-like question and answer format. Here's a trick I use to get them to work in this format:
+
+```
+Below is an instruction that describes a task. Write a response that appropriately completes the task.
+
+### Instruction:
+<instruction>
+
+### Response:
+```
+
+https://agi-sphere.com/llama-models/
 
 ### PiChat
 
@@ -219,9 +270,15 @@ Use the `/imagine` command to send prompts to the AI.
 
 Free and open source! You can install it on your computer. Requires a powerful GPU with a minimum of 8GB VRAM (12GB recommended).
 
-<Figure caption="A surreal wide angle cinematic shot of a steampunk cityscape with towering metallic buildings, and floating objects, creating a dreamlike and disorienting atmosphere. SD 1.4, Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 4016536929">
+<Figure caption="Prompt: A surreal wide angle cinematic shot of a steampunk cityscape with towering metallic buildings, and floating objects, creating a dreamlike and disorienting atmosphere. SD 1.4, Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 4016536929">
 
-![A surreal wide angle cinematic shot of a steampunk cityscape with towering metallic buildings, and floating objects, creating a dreamlike and disorienting atmosphere. SD 1.4, Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 4016536929](./cityscape.png)
+![A surreal wide angle cinematic shot of a steampunk cityscape with towering metallic buildings, and floating objects, creating a dreamlike and disorienting atmosphere.Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 4016536929, Model: sd-v1-4-full-ema](./cityscape.png)
+
+</Figure>
+
+<Figure caption="Prompt: DSLR photo of a (viking warrior:1.3) family dining at the table. the room is dimly lit, hyperrealistic, hdr, intricate detailed clothes, (detailed faces:1.5), 4k resolution. period movie style shot. f/2.8, 50mm lens focused on faces. Steps: 60, Sampler: Euler, CFG scale: 16, Seed: 1535768955, Face restoration: GFPGAN, Size: 512x512, Model hash: 14749efc0a, Model: sd-v1-4-full-ema">
+
+![DSLR photo of a (viking warrior:1.3) family dining at the table. the room is dimly lit, hyperrealistic, hdr, intricate detailed clothes, (detailed faces:1.5), 4k resolution. period movie style shot. f/2.8, 50mm lens focused on faces](./viking-family.jpg)
 
 </Figure>
 
@@ -231,9 +288,88 @@ https://playgroundai.com/
 
 Free to use for up to 1000 image generations in a day!
 
+<Figure caption="Prompt: Photograph of a cat astronaut in a space suit. hard rim lighting. Model: SD 2.1, Guidance: 20, Quality: 25, Seed: 246430858">
+
+![Photograph of a cat astronaut in a space suit. hard rim lighting](./cat-astronaut.png)
+
+</Figure>
+
+### Scribble Diffusion
+
+https://scribblediffusion.com/
+
+<Figure caption="Prompt: Dramatic poster of a superhero movie">
+
+![Dramatic poster of a superhero movie](./superhero-movie.png)
+
+</Figure>
+
+https://scribblediffusion.com/scribbles/frxljfpnzbb5ddimfu3yuc5goi
+
 ## Demo 3: AI Agent
 
 ### Auto GPT
+
+https://github.com/Significant-Gravitas/Auto-GPT
+
+More about using Auto GPT and GPT4 to create your own AI Agent: https://www.tomshardware.com/how-to/auto-gpt-ai-agent
+
+### JWST News Bot
+
+```
+Goal 1: find news about discoveries made by the James Webb Space Telescope in the past 3 months
+Goal 2: summarize each news into 2-3 sentences
+Goal 3: save the summary with the date in chronological order in csv format
+```
+
+### Earthquake Analyzer
+
+```
+Goal 1: find news about all earthquakes of magnitude 5 richter or above in the past 3 months
+Goal 2: for each earthquake find details about changes in the weather conditions like tempreature, pressure and precipitation in the 3 days leading up to the earthquake
+Goal 3: analyze and correlate the weather information with the earthquake date and time to generate a summary
+Goal 4: save the data as an HTML table with the date, location coordinates, nearest major city, earthquake magnitude, correlation analysis summary
+```
+
+
+
+### Bonus: An Assortment of Up and Coming AI Tools
+
+1. [BlenderGPT](https://github.com/gd3kr/BlenderGPT) - 3D modeling with the help of GPT4
+1. [RunwayML](https://research.runwayml.com/gen2) - Prompt based video generation and editing (coming soon!)
+1. https://beta.elevenlabs.io/ - Create AI generated voice!
+1. [SoftVC VITS Singing Voice Conversion](https://github.com/voicepaw/so-vits-svc-fork)
+1. https://boomy.com - Create Ai music
+1. https://uncody.com - Generate your website in seconds
+1. https://durable.co/ - Website generator
+1. https://gamma.app/ - Create presentations
+1. https://decktopus.com - Create presentations
+1. https://www.kickresume.com/ - Create your resume
+1. https://tripnotes.ai - Create travel itineraries
+1. https://krisp.ai - AI noise cancelation
+1. https://tldv.io - Summarize your meetings
+1. https://www.heygen.com/ - AI generated marketing videos
+1. https://writesonic.com - Ai writing assistant
+1. https://compose.ai - Have AI write emails for you (chrome extension)
+1. https://usechatgpt.ai - Use ChatGPT on any website (chrome extension)
+1. https://eightify.app/ - Generate Youtube video summary (chrome extension)
+1. https://stockimg.ai - AI generated high quality image assets
+1. https://bluewillow.ai - A free mid journey
+1. https://snackprompt.com - Product hunt for prompts
+1. https://slack.com/blog/news/introducing-slack-gpt - Slack GPT
+
+<div style="position: relative; overflow: hidden; width: 100%;">
+  <div style="padding-top:62.5%"></div>
+  <iframe width="966" height="543"
+    src="https://www.youtube.com/embed/17_xLsqny9E"
+    title="AI Voice Conversion Demo | Eleven Labs"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+  >
+  </iframe>
+</div>
 
 ---
 
@@ -407,7 +543,9 @@ Source: https://www.theverge.com/21298762/face-depixelizer-ai-machine-learning-t
 
 ## Closing Thoughts
 
-In my personal opinion, AI is the perfect tool to augment human capabilities. Expect another major avalanche of innovation when these technologies "shrink" to fit in our pockets.
+In my personal opinion, AI is the perfect tool to augment human capabilities. Expect another major avalanche of innovation when these technologies "shrink" to fit in our pockets. Guess what, it has already begun! [MLC LLM can be installed on your phone!](https://mlc.ai/mlc-llm/)
+
+
 
 What does the future hold? Imagine something like Stable Diffusion's in-painting built in to the camera app! LLM background processes running on our laptops and phones - ready to be tapped any time! That's the future I'm looking forward to, and it's not far!
 
