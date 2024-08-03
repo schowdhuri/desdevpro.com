@@ -1,0 +1,39 @@
+---
+category: blog
+coverImage: cover.jpg
+date: "2020-04-12"
+path: from-arch-linux-to-manjaro
+status: live
+meta:
+  author: Subir Chowdhuri
+  description: I finally gave up on maintaining my decade-old Arch Linux installation
+  keywords: linux, arch linux, manjaro, nvidia
+summary: I finally gave up on maintaining my decade-old Arch Linux installation
+tags:
+  - Linux
+title: Gave up on fighting Arch Linux!
+type: article # must be set to `article`
+updated: "2020-04-12"
+---
+
+After 10+ years of dedication and constant tinkering, I finally lost my battle with arch Linux.
+
+My installation had not been upgraded for over a year. The first signs of trouble appeared when my primary browser, Firefox stopped updating itself and no longer worked on streaming sites like Amazon Prime Video. Upon investigation, I discovered that Arch had switched to a new archive format called zStandard (`zstd`), which my installation didn't support. This breaking change change effectively blocked me from updating anything.
+
+Going by the "Arch philosophy" of upgrading the entire system instead of individual packages, I decided to perform a full system upgrade. I hoped this would also add `zstd` support. Unfortunately, this led to a cascade of issues.
+
+The upgraded bumped my Linux kernel to v5, which my old Nvidia GPU doesn't support. Well, there is the open source Nouveau driver. I no longer do any graphics intensive work on that machine. So, I removed the proprietary Nvidia drivers. I no longer had a GUI desktop environment to boot in to. From this point on, I was confined to the CLI.
+
+To compound matters, most of the GPG keys in my keyring were no longer valid. Yes, you can get new keys. Only if you have `zstd` support! Talk about a frustrating deadlock.
+
+In a last-ditch effort, I found a binary version of pacman with `zstd` support on a third-party site. I manually replaced my existing pacman with this version and updated my keyring. However, package integrity tests continued to fail, forcing me to disable signature checking (not recommended!).
+
+After downloading 4GB of packages, pacman encountered a bazillion file conflicts and refused to proceed. From pacman's error logs I compiled a list of conflicting files and wrote a script to move them out to a temporary location. This allowed me to install a few packages successfully.
+
+With fingers crossed, I started a full system upgrade which completely stalled the machine. After a hard reboot, I was greeted with a kernel panic - the final straw in this arduous process. This was the dead end after three nights of wrestling with these issues.
+
+## A Fresh Start
+
+After three nights of battling these issues, I made the difficult decision to move on from Arch Linux. Nuked the `/` and `/var` directories and installed Manjaro, an Arch-based distribution known for its out-of-the-box functionality.
+
+It's unfair to call Manjaro _bloated_ but it does come with more features and software out of the box, compared to Arch. That may be exactly what I need at the moment. As much as I love geeking out with Arch, my need of the hour is for the OS to stay out of my way so I can get some work done. Hoping Manjaro, with its added layer of polish, will provide that stability and peace of mind.
